@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -636,6 +636,7 @@ GameObject:
   - component: {fileID: 388525035}
   - component: {fileID: 388525036}
   - component: {fileID: 388525037}
+  - component: {fileID: 388525038}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -757,6 +758,18 @@ MonoBehaviour:
   gameobject_to_spawn_2: {fileID: 7082275795938471698, guid: 321da749f8619eb45a3d6f0135cb0cc4,
     type: 3}
   spawn_sound_effect: {fileID: 8300000, guid: ce408681c72ca4e4695251acf937779c, type: 3}
+--- !u!114 &388525038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388525029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79877a951d4c471db09746081299da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1154,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Switch Mode
+  m_text: 'Explore
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1366,7 +1381,7 @@ GameObject:
   - component: {fileID: 1489759710}
   - component: {fileID: 1489759709}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Explore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
