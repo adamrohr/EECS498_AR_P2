@@ -27,6 +27,8 @@
 		private float deltaLatitude = 0.0f;
 		private float deltaLongitude = 0.0f;
 
+		public static float playerMovement = 0.0f;
+
 		// private LocationLogReader _logReader;
 		// private IEnumerator<Location> _locationEnumerator;
 
@@ -63,6 +65,8 @@
 				deltaLatitude = -0.000001f;
 				SetLocation();
 			}
+			// TODO: Determine what cutoff the trees should start growing at based on the movement
+			playerMovement += Mathf.Abs(deltaLatitude) + Mathf.Abs(deltaLongitude);
 		}
 
 		// private void OnDestroy()
