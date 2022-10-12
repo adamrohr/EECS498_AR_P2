@@ -6,7 +6,7 @@ public class TreeGrowth : MonoBehaviour
 {
 
     public float moneyEarned = 0.0f;
-    public float[] playerMovementGrowthTransition = [];
+    public float[] playerMovementGrowthTransition = {};
 
     // Start is called before the first frame update
     void Start()
