@@ -32,7 +32,12 @@
 		// private LocationLogReader _logReader;
 		// private IEnumerator<Location> _locationEnumerator;
 
-
+		private void Start()
+		{
+			// Middle of grove
+			_currentLocation.LatitudeLongitude = new Vector2d(42.29206681015811f, -83.71597243218476f);
+		}
+		
 // #if UNITY_EDITOR
 // 		protected override void Awake()
 // 		{
