@@ -29,13 +29,17 @@
 
 		public static float playerMovement = 0.0f;
 
+		public static Vector2d playerLocation = new Vector2d(42.29206681015811f, -83.71597243218476f);
+
+		[SerializeField] private TreeSpawn treeSpawn;
+		
 		// private LocationLogReader _logReader;
 		// private IEnumerator<Location> _locationEnumerator;
 
 		private void Start()
 		{
 			// Middle of grove
-			_currentLocation.LatitudeLongitude = new Vector2d(42.29206681015811f, -83.71597243218476f);
+			_currentLocation.LatitudeLongitude = playerLocation;
 		}
 		
 // #if UNITY_EDITOR
@@ -50,6 +54,8 @@
 		private void Update() {
 			// 1 Degree of Latitude is 69 miles (364,000ft)
 			// 1 Degree of Longitude is 54.6 miles (288,200ft)
+			deltaLongitude = 0f;
+			deltaLatitude = 0f;
 			if(Input.GetKey(KeyCode.RightArrow)) {
 				// Longitude up
 				deltaLongitude = 0.000001f;
@@ -96,6 +102,8 @@
 			// // no need to check if 'MoveNext()' returns false as LocationLogReader loops through log file
 			// _locationEnumerator.MoveNext();
 			_currentLocation.LatitudeLongitude += new Vector2d(deltaLatitude, deltaLongitude);
+			playerLocation = _currentLocation.LatitudeLongitude;
+			treeSpawn.SetPlayerLocation(playerLocation);
 		}
 	}
 }

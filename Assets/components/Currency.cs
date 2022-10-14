@@ -7,12 +7,11 @@ using UnityEngine;
 public class Currency : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private int currentCurrency;
+    private static int currentCurrency = 0;
     [SerializeField] private TextMeshProUGUI _myCurrencyElement;
-    
-    void Start()
+    private void Start()
     {
-        
+        UpdateCurrencyText();
     }
 
     // Update is called once per frame

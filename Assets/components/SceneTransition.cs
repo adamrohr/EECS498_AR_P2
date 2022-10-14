@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    private bool isExplore = true;
+    private static bool isExplore = true;
 
     public void SwitchModes() {
-        if(isExplore) {
-            SceneManager.LoadScene("exploration_scene");
+        if(!isExplore) {
+            SceneManager.LoadScene("exploration_scene", LoadSceneMode.Single);
         } else {
-            SceneManager.LoadScene("interaction_scene");
+            SceneManager.LoadScene("interaction_scene", LoadSceneMode.Single);
         }
 
         isExplore = !isExplore;
