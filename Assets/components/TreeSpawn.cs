@@ -14,6 +14,7 @@ public class TreeSpawn : MonoBehaviour
     private AbstractMap map;
 
     [SerializeField] private ItemTracker inv;
+    [SerializeField] private Currency currency;
     
     [SerializeField] private GameObject tree0;
     [SerializeField] private GameObject tree1;
@@ -27,11 +28,15 @@ public class TreeSpawn : MonoBehaviour
     [SerializeField] private GameObject tree9;
 
     private GameObject[] treePrefabs = new GameObject[10];
-    
+
+    private int[] _treesSpawned = new int[]{0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0};
+
     [SerializeField]
     float spawnScale = .2f;
 
     private static Vector2d playerLocation;
+
+    private float timer = 0.0f;
     
     // Start is called before the first frame update
     void Start()
@@ -53,18 +58,30 @@ public class TreeSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+        int seconds = (int)timer % 60;
+
+        if (seconds >= 10)
+        {
+            for (int i = 0; i < _treesSpawned.Length; ++i)
+            {
+                currency.AddCurrency(_treesSpawned[i] * i * 2);
+            }
+
+            timer = 0.0f;
+        }
     }
 
     public void CreateTrees()
     {
         List<int> planted = inv.GetPlanted();
-        print(planted.Count);
         for (int i = 0; i < planted.Count; ++i)
         {
             var instance = Instantiate(treePrefabs[planted[i]]);
             instance.transform.localPosition = map.GeoToWorldPosition(playerLocation, true);
             instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
             DontDestroyOnLoad(instance);
+            _treesSpawned[planted[i]] += 1;
         }
         inv.ClearPlanted();
     }

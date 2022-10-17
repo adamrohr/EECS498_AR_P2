@@ -1003,21 +1003,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 223974227}
-  gameobject_to_spawn_0: {fileID: 623294444865855253, guid: 3e1affca5e85b4c35813eb37b1071708,
+  gameobject_to_spawn_0: {fileID: 1779090162253299471, guid: af28e02efb1b49bc09580ce7162442e3,
     type: 3}
-  gameobject_to_spawn_1: {fileID: 8697062894979382062, guid: fa5d1fd8879c648e8b336deee628c5d6,
+  gameobject_to_spawn_1: {fileID: 2441779057326299809, guid: 4e9f5b3ff3b6fa4aaa4678ac8bf8e429,
     type: 3}
-  gameobject_to_spawn_2: {fileID: 7433426643466934275, guid: 5e64b2de629ca409094040407636f1df,
+  gameobject_to_spawn_2: {fileID: 1332680640941198, guid: 6307fd731e2247b479cddefb30b094fa,
     type: 3}
-  gameobject_to_spawn_3: {fileID: 3738682337243004879, guid: 0194a5c5ada9649febecf0ce6cb47939,
+  gameobject_to_spawn_3: {fileID: 1473601184474156, guid: 67762154df3b7ca4eaaebcc646c11bbf,
     type: 3}
-  gameobject_to_spawn_4: {fileID: 1139572726157748, guid: 3c98bb4bee2f2ba4b92a2fbca7b8831f,
+  gameobject_to_spawn_4: {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732,
     type: 3}
-  gameobject_to_spawn_5: {fileID: 1301814490440934, guid: 631dcab7c4e7c22418d6f6fa3dd74c7d,
+  gameobject_to_spawn_5: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739,
     type: 3}
-  gameobject_to_spawn_6: {fileID: 1820073310235746, guid: 9b77d12e48b7f364a82333485eca4473,
+  gameobject_to_spawn_6: {fileID: 4521090229625430784, guid: 874e3a4a755ef9e639594d1f5df968d1,
     type: 3}
-  gameobject_to_spawn_7: {fileID: 1226896354247008, guid: f1ac1674b1044b940a5e6f1e32750350,
+  gameobject_to_spawn_7: {fileID: 4124323062290505003, guid: e021f2107856b97978976612624c27b8,
     type: 3}
   gameobject_to_spawn_8: {fileID: 919132149155446097, guid: b61cbb3a5418451ef879c216ad91ec47,
     type: 3}

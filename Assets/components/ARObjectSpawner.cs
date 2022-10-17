@@ -21,6 +21,7 @@ public class ARObjectSpawner : MonoBehaviour
     private GameObject[] trees = new GameObject[10];
     
     public AudioClip spawn_sound_effect;
+    public float spawnScale = 0.2f;
 
     private void Start()
     {
@@ -40,6 +41,7 @@ public class ARObjectSpawner : MonoBehaviour
     {
         GameObject new_object = Instantiate(trees[objectNumber]);
         new_object.transform.SetPositionAndRotation(cursor.position, cursor.rotation);
+        new_object.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
 
         AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
     }

@@ -57,7 +57,6 @@ public class ItemTracker : MonoBehaviour
 
     public List<int> GetPlanted()
     {
-        print(_seedsPlanted);
         return _seedsPlanted;
     }
 

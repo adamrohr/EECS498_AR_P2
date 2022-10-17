@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3929413350646648991}
   - component: {fileID: 2977142795302354481}
   - component: {fileID: 1449051924554379341}
+  - component: {fileID: 8913036509630972992}
   m_Layer: 0
   m_Name: map-marker
   m_TagString: Untagged
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deec7acda43754efd91c6c4bc4fb5875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8913036509630972992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8047200771891419664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
