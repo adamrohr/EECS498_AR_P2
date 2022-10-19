@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 843921208}
   offset: {x: 0, y: 61.83, z: -30}
+  speed: 5
 --- !u!1 &14308159
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,63 +749,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93156729}
   m_CullTransparentMesh: 1
---- !u!1 &110369087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 110369089}
-  - component: {fileID: 110369088}
-  m_Layer: 0
-  m_Name: test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &110369088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110369087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6625254a1b332c743a1bb5e12df9dcf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 0}
-  gameobject_to_spawn_0: {fileID: 0}
-  gameobject_to_spawn_1: {fileID: 0}
-  gameobject_to_spawn_2: {fileID: 0}
-  gameobject_to_spawn_3: {fileID: 0}
-  gameobject_to_spawn_4: {fileID: 0}
-  gameobject_to_spawn_5: {fileID: 0}
-  gameobject_to_spawn_6: {fileID: 0}
-  gameobject_to_spawn_7: {fileID: 0}
-  gameobject_to_spawn_8: {fileID: 0}
-  gameobject_to_spawn_9: {fileID: 0}
-  spawn_sound_effect: {fileID: 0}
-  spawnScale: 0.2
---- !u!4 &110369089
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110369087}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.164444, y: 1084.6526, z: -1199.6058}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &133671050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1094528686802348, guid: 35ce2bb4caba9434db5e656796b632b1,
@@ -862,10 +806,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 133671051}
-  obSpawner: {fileID: 0}
   inv: {fileID: 1347463308}
   currency: {fileID: 186529199}
-  objSpawner: {fileID: 0}
+  objSpawner: {fileID: 1680056664}
   tree0: {fileID: 1779090162253299471, guid: af28e02efb1b49bc09580ce7162442e3, type: 3}
   tree1: {fileID: 2441779057326299809, guid: 4e9f5b3ff3b6fa4aaa4678ac8bf8e429, type: 3}
   tree2: {fileID: 192044, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
@@ -7509,6 +7452,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678373669}
   m_CullTransparentMesh: 1
+--- !u!1 &1680056663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680056665}
+  - component: {fileID: 1680056664}
+  m_Layer: 0
+  m_Name: Temp ARObjectSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1680056664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680056663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6625254a1b332c743a1bb5e12df9dcf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 0}
+  gameobject_to_spawn_0: {fileID: 0}
+  gameobject_to_spawn_1: {fileID: 0}
+  gameobject_to_spawn_2: {fileID: 0}
+  gameobject_to_spawn_3: {fileID: 0}
+  gameobject_to_spawn_4: {fileID: 0}
+  gameobject_to_spawn_5: {fileID: 0}
+  gameobject_to_spawn_6: {fileID: 0}
+  gameobject_to_spawn_7: {fileID: 0}
+  gameobject_to_spawn_8: {fileID: 0}
+  gameobject_to_spawn_9: {fileID: 0}
+  spawn_sound_effect: {fileID: 0}
+  spawnScale: 0.2
+--- !u!4 &1680056665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680056663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.164444, y: 1084.6526, z: -1199.6058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1844114782
 GameObject:
   m_ObjectHideFlags: 0
