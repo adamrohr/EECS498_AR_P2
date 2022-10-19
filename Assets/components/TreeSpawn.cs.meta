@@ -3,7 +3,22 @@ guid: 4b16f8deebb114cd7bdc2390f8d639a2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - map: {instanceID: 0}
+  - inv: {instanceID: 0}
+  - currency: {instanceID: 0}
+  - gameobj: {instanceID: 0}
+  - objSpawner: {instanceID: 0}
+  - tree0: {instanceID: 0}
+  - tree1: {instanceID: 0}
+  - tree2: {instanceID: 0}
+  - tree3: {instanceID: 0}
+  - tree4: {instanceID: 0}
+  - tree5: {instanceID: 0}
+  - tree6: {instanceID: 0}
+  - tree7: {instanceID: 0}
+  - tree8: {instanceID: 0}
+  - tree9: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

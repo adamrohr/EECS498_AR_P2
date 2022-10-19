@@ -12,10 +12,10 @@ public class TreeSpawn : MonoBehaviour
     
     [SerializeField]
     private AbstractMap map;
-
     [SerializeField] private ItemTracker inv;
     [SerializeField] private Currency currency;
-    
+    [SerializeField] private ARObjectSpawner objSpawner;
+
     [SerializeField] private GameObject tree0;
     [SerializeField] private GameObject tree1;
     [SerializeField] private GameObject tree2;
@@ -75,10 +75,12 @@ public class TreeSpawn : MonoBehaviour
     public void CreateTrees()
     {
         List<int> planted = inv.GetPlanted();
+        List<Vector2d> locations = objSpawner.getTreeLocations();
         for (int i = 0; i < planted.Count; ++i)
         {
+            print(locations[i]);
             var instance = Instantiate(treePrefabs[planted[i]]);
-            instance.transform.localPosition = map.GeoToWorldPosition(playerLocation, true);
+            instance.transform.localPosition = map.GeoToWorldPosition(locations[i], true);
             instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
             DontDestroyOnLoad(instance);
             _treesSpawned[planted[i]] += 1;
