@@ -26,6 +26,7 @@ public class TreeSpawn : MonoBehaviour
     [SerializeField] private GameObject tree7;
     [SerializeField] private GameObject tree8;
     [SerializeField] private GameObject tree9;
+    [SerializeField] private GameObject squirrelPrfab;
 
     private GameObject[] treePrefabs = new GameObject[10];
 
@@ -60,7 +61,7 @@ public class TreeSpawn : MonoBehaviour
     {
         timer += Time.deltaTime;
         int seconds = (int)timer % 60;
-
+        int squirrelSpawn = Random.Range(0, 1000);
         if (seconds >= 10)
         {
             for (int i = 0; i < _treesSpawned.Length; ++i)
@@ -69,6 +70,13 @@ public class TreeSpawn : MonoBehaviour
             }
 
             timer = 0.0f;
+        }
+
+        // Check if squirrelSpawn is a valid index in treesSpawned
+        if(squirrelSpawn < _treesSpawned.Length) {
+            var squirrel = Instantiate(squirrelPrefab);
+            squirrel.transform.localPosition = map.GeoToWorldPosition(_treesSpawned[squirrelSpawn].transform, true);
+            DontDestroyOnLoad(squirrel);
         }
     }
 
