@@ -5,9 +5,13 @@ using TMPro;
 public class ItemTracker : MonoBehaviour
 {
     // Start is called before the first frame update
-    private static int[] _seeds = new int[10]{3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+    private static int[] _items = new int[11]{1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private int[] _itemPrices = new int[11] {5, 5, 7, 10, 12, 15, 17, 20, 25, 30 ,50};
+    private bool[] _itemsEnabled = new bool[11] { true, false, false, false, false, false, false, false, false, false, false};
     private static List<int> _seedsPlanted = new List<int>();
+    [SerializeField] private Currency currency;
 
+    [SerializeField] private TextMeshProUGUI acorns;
     [SerializeField] private TextMeshProUGUI mySeeds0;
     [SerializeField] private TextMeshProUGUI mySeeds1;
     [SerializeField] private TextMeshProUGUI mySeeds2;
@@ -19,19 +23,20 @@ public class ItemTracker : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mySeeds8;
     [SerializeField] private TextMeshProUGUI mySeeds9;
     
-    private TextMeshProUGUI[] _seedTexts = new TextMeshProUGUI[10];
+    private TextMeshProUGUI[] _itemTexts = new TextMeshProUGUI[11];
     private void Start()
     {
-        _seedTexts[0] = mySeeds0;
-        _seedTexts[1] = mySeeds1;
-        _seedTexts[2] = mySeeds2;
-        _seedTexts[3] = mySeeds3;
-        _seedTexts[4] = mySeeds4;
-        _seedTexts[5] = mySeeds5;
-        _seedTexts[6] = mySeeds6;
-        _seedTexts[7] = mySeeds7;
-        _seedTexts[8] = mySeeds8;
-        _seedTexts[9] = mySeeds9;
+        _itemTexts[0] = acorns;
+        _itemTexts[1] = mySeeds0;
+        _itemTexts[2] = mySeeds1;
+        _itemTexts[3] = mySeeds2;
+        _itemTexts[4] = mySeeds3;
+        _itemTexts[5] = mySeeds4;
+        _itemTexts[6] = mySeeds5;
+        _itemTexts[7] = mySeeds6;
+        _itemTexts[8] = mySeeds7;
+        _itemTexts[9] = mySeeds8;
+        _itemTexts[10] = mySeeds9;
         UpdateSeedsCount();
     }
 
@@ -41,18 +46,25 @@ public class ItemTracker : MonoBehaviour
         
     }
 
-    public void SubtractSeed(int from)
+    public void SubtractItem(int from)
     {
-        _seeds[from] = Mathf.Max(_seeds[from] - 1, 0);
-        _seedTexts[from].text = _seeds[from].ToString();
-        _seedsPlanted.Add(from);
-        print(_seedsPlanted);
+        _items[from] = Mathf.Max(_items[from] - 1, 0);
+        _itemTexts[from].text = _items[from].ToString();
+        
+        if (from > 0)
+        {
+            _seedsPlanted.Add(from);
+        }
     }
 
-    public void AddSeed(int from)
+    public void AddItem(int from)
     {
-        _seeds[from] = Mathf.Min(_seeds[from] + 1, 9);
-        _seedTexts[from].text = _seeds[from].ToString();
+        if (_itemsEnabled[from] && currency.GetCurrency() >= _itemPrices[from] && _items[from] < 10)
+        {
+            _items[from] += 1;
+            _itemTexts[from].text = _items[from].ToString();
+            currency.SubtractCurrency(_itemPrices[from]);
+        }
     }
 
     public List<int> GetPlanted()
@@ -67,9 +79,9 @@ public class ItemTracker : MonoBehaviour
     
     private void UpdateSeedsCount()
     {
-        for (int i = 0; i < _seeds.Length; ++i)
+        for (int i = 0; i < _items.Length; ++i)
         {
-            _seedTexts[i].text = _seeds[i].ToString();
+            _itemTexts[i].text = _items[i].ToString();
         }
     }
 }

@@ -26,7 +26,7 @@ public class TreeSpawn : MonoBehaviour
     [SerializeField] private GameObject tree7;
     [SerializeField] private GameObject tree8;
     [SerializeField] private GameObject tree9;
-    [SerializeField] private GameObject squirrelPrfab;
+    [SerializeField] private GameObject squirrelPrefab;
 
     private GameObject[] treePrefabs = new GameObject[10];
 
@@ -75,7 +75,7 @@ public class TreeSpawn : MonoBehaviour
         // Check if squirrelSpawn is a valid index in treesSpawned
         if(squirrelSpawn < _treesSpawned.Length) {
             var squirrel = Instantiate(squirrelPrefab);
-            squirrel.transform.localPosition = map.GeoToWorldPosition(_treesSpawned[squirrelSpawn].transform, true);
+            // squirrel.transform.localPosition = map.GeoToWorldPosition(_treesSpawned[squirrelSpawn].transform, true);
             DontDestroyOnLoad(squirrel);
         }
     }

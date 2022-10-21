@@ -31,6 +31,11 @@ public class Currency : MonoBehaviour
         UpdateCurrencyText();
     }
 
+    public int GetCurrency()
+    {
+        return currentCurrency;
+    }
+
     public void SubtractCurrency(int currency)
     {
         currentCurrency = Math.Max(currentCurrency - currency, 0);
