@@ -36,8 +36,8 @@ public class TreeSpawn : MonoBehaviour
     float spawnScale = .2f;
 
     private static Vector2d playerLocation;
-
     private float timer = 0.0f;
+    private bool spawnedTrees = false;
     
     // Start is called before the first frame update
     void Start()
@@ -53,15 +53,22 @@ public class TreeSpawn : MonoBehaviour
         treePrefabs[8] = tree8;
         treePrefabs[9] = tree9;
         
-        CreateTrees();
+        // CreateTrees();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(map.InitialZoom != 0 && !spawnedTrees) {
+            CreateTrees();
+            spawnedTrees = true;
+        }
+
         timer += Time.deltaTime;
         int seconds = (int)timer % 60;
         int squirrelSpawn = Random.Range(0, 1000);
+        List<Vector2d> locations = objSpawner.getTreeLocations();
+
         if (seconds >= 10)
         {
             for (int i = 0; i < _treesSpawned.Length; ++i)
@@ -72,10 +79,10 @@ public class TreeSpawn : MonoBehaviour
             timer = 0.0f;
         }
 
-        // Check if squirrelSpawn is a valid index in treesSpawned
-        if(squirrelSpawn < _treesSpawned.Length) {
+        // Check if squirrelSpawn is a valid index in locations
+        if(squirrelSpawn < locations.Count) {
             var squirrel = Instantiate(squirrelPrefab);
-            // squirrel.transform.localPosition = map.GeoToWorldPosition(_treesSpawned[squirrelSpawn].transform, true);
+            squirrel.transform.localPosition = map.GeoToWorldPosition(locations[squirrelSpawn], true);
             DontDestroyOnLoad(squirrel);
         }
     }
@@ -86,7 +93,6 @@ public class TreeSpawn : MonoBehaviour
         List<Vector2d> locations = objSpawner.getTreeLocations();
         for (int i = 0; i < planted.Count; ++i)
         {
-            print(locations[i]);
             var instance = Instantiate(treePrefabs[planted[i]]);
             instance.transform.localPosition = map.GeoToWorldPosition(locations[i], true);
             instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);

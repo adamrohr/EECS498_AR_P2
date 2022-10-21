@@ -37,6 +37,7 @@ public class ARObjectSpawner : MonoBehaviour
         trees[7] = gameobject_to_spawn_7;
         trees[8] = gameobject_to_spawn_8;
         trees[9] = gameobject_to_spawn_9;
+
     }
 
     public void SpawnGameobjectAtCursor(int objectNumber)
@@ -45,6 +46,7 @@ public class ARObjectSpawner : MonoBehaviour
         new_object.transform.SetPositionAndRotation(cursor.position, cursor.rotation);
         new_object.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
         Vector2d treeLoc = new Vector2d(cursor.position.x, cursor.position.y);
+        // Vector2d treeLoc = new Vector2d(42.291609, -83.715868);
         treeLocations.Add(treeLoc);
         for(int i = 0; i < treeLocations.Count; i++) {
             print("SpawnObj at cursor loop");
