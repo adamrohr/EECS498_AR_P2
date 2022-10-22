@@ -2278,7 +2278,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 48338788076444d35ba910c282422cb4, type: 2}
+      objectReference: {fileID: 2100000, guid: 1420499bd12aa4ee5b9e8a63902865b2, type: 2}
     - target: {fileID: 6813907045951404477, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2312,17 +2312,15 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: '<b>EECS Building</b>
-
-
-        The Computer Science and Engineering
-        (CSE) Division of the Electrical Engineering and Computer Science (EECS)
-        Department at the University of Michigan (UM) traces its formal founding
-        to 1957 with roots in the 1940s.
-
-
-        In 1983, a $30M building on North
-        Campus was approved. Three years later, most moved into the new EECS Building.'
+      value: "<b>Orion Statue - UMMA</b>\n\nMark di Suvero, who once described his
+        work as \u201Cpainting in three dimensions,\u201D draws inspiration from
+        many sources, including mathematics, physics, music, and astronomy, to create
+        large-scale sculptures with a sense of geometry and structure. Like many
+        of his works, Orion\u2014titled after the famed hunter from Greek mythology
+        after whom the constellation is named\u2014is painted bright orange-red,
+        creating a striking contrast with the sky and the work\u2019s surroundings.
+        Since it is meant to be viewed from a variety of angles and positions, the
+        artist paid careful attention to the balance of forms and space."
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -2765,6 +2763,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6813907045767737244, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 0badd333a72b4472fa87b6646490fae3, type: 2}
     - target: {fileID: 6813907045951404477, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2794,6 +2797,35 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
+        type: 3}
+      propertyPath: m_text
+      value: '<b>Angell Hall</b>
+
+
+        Angell Hall was the cornerstone of the
+        building program inaugurated by President Burton in 1920. Old University
+        Hall could no longer house the growing College of Literature, Science and
+        Arts. Due to overcrowding, classes were held in several other buildings,
+        some classes were simply cancelled, and several classrooms were partitioned.
+        Since College was central to the University''s administrative and educational
+        functions, the new building was conceived of as the central building on campus.
+        President Burton said, "It [should] be beautiful, dignified, and commanding.
+        It [should] help give unity and form to the entire campus." To match the
+        appearance of surrounding structures, such as Hill Auditorium, Alumni Memorial
+        Hall, and the Clements Library, planners of the building chose a classic
+        design.
+
+
+        Albert Kahn designed the structure, which extended 480
+        feet along State Street. The entrance portico followed a classical model,
+        with eight huge Doric columns surmounting a wide esplanade of steps. Several
+        sculptures and mottos carved above the main door and the columns symbolize
+        educational values. With four floors and 152,000 square feet of space, the
+        building originally housed numerous classrooms and offices, and the Dean
+        of LSA. For several years, the President and other officers also occupied
+        offices in Angell Hall. '
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -4174,7 +4206,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 48338788076444d35ba910c282422cb4, type: 2}
+      objectReference: {fileID: 2100000, guid: 6667a3e4910cb4f82a7ef0f2e498d406, type: 2}
     - target: {fileID: 6813907045951404477, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4208,17 +4240,20 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: '<b>EECS Building</b>
-
-
-        The Computer Science and Engineering
-        (CSE) Division of the Electrical Engineering and Computer Science (EECS)
-        Department at the University of Michigan (UM) traces its formal founding
-        to 1957 with roots in the 1940s.
-
-
-        In 1983, a $30M building on North
-        Campus was approved. Three years later, most moved into the new EECS Building.'
+      value: "<b>Hatcher Graduate Library</b>\n\nFrom the birth of the University
+        of Michigan in 1837 the creation and maintenance of a library was\nprioritized
+        by the Legislature and the Board of Regents. Audubon's Birds of America,
+        the library\u2019s first purchase, was acquired in 1838 and within a couple
+        of years the library\u2019s collection had grown to over 3,400 volumes.\n\nNo
+        separate library building yet existed and the books were housed in a variety
+        of different locations from the Law Building to professors\u2019 houses.
+        In 1883 the first library building was completed but the space for the collections
+        and for use of the collections soon became insufficient.\n\nA new building,
+        designed by renowned architect Albert Kahn, was completed in 1920. For the
+        next 50 years the collections continued to grow in size and diversity and
+        an eight story addition to the Library was built in 1970, the first high
+        rise on central campus. In 1971 the two adjoined library buildings were named
+        the Harlan Hatcher Graduate Library."
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -5237,6 +5272,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6813907045767737244, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: f4bfd28ce44fc4530bec01b49fa51107, type: 2}
     - target: {fileID: 6813907045951404477, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5266,6 +5306,173 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
+        type: 3}
+      propertyPath: m_text
+      value: "<b>Rackham</b>\n\nIn 1935, University President Alexander G. Ruthven
+        wrote to the trustees of the Rackham Fund to offer them what he called the
+        very heart of the University. He persuaded them to donate money for construction
+        of a building, bearing Rackham\u2019s name, that would house the graduate-school
+        administration and serve as a focal point for graduate activities on campus.
+        A separate graduate school had existed since 1912, but had never had its
+        own headquarters. Eventually, $2.5 million were donated for the land, the
+        buildings and the furnishings (construction of the building would cost $13,000
+        less than the contractors originally estimated), as well as a $4 million
+        endowment to sponsor research and publication by graduate students and faculty.\n\nThe
+        contract for design of the Rackham building went to Smith, Hinchman Grylls,
+        then as now one of Detroit\u2019s largest architectural firms, and was assigned
+        to William E. Kapp, one of the brilliant young designers on the staff. Kapp
+        had been trained at the University of Pennsylvania, and worked for several
+        years under Albert Kahn, Detroit\u2019s most famous architect and Smith,
+        Hinchman Grylls\u2019 main competitor. Unlike Kahn\u2019s firm, Smith, Hinchman
+        Grylls had a reputation for allowing their designers individual freedom,
+        so Kapp moved to that firm in 1920. He stayed through the Depression, when
+        he left to start his own architectural firm. The Rackham building was his
+        last design for Smith, Hinchman Grylls. Ground for it was broken in May 1936,
+        and it was officially dedicated in June 1938. Kapp did well for his firm:
+        in 1980, Rackham\u2019s endurance and beauty were recognized by the Building
+        Stone Institute\u2019s Tucker Award.\n\nThe building, which is made of Indiana
+        limestone and has a copper roof, was designed with tremendous sensitivity
+        to the surrounding area. For one thing, it was the terminus for the Ingalls
+        Street mall [in 1980, S. Ingalls, a one-block street running between N. University
+        And E. Washington, was replaced with a brick and grass pedestrian walkway],
+        beyond the opposite end of which is the Graduate Library, designed by Kapp\u2019s
+        former mentor, Albert Kahn. Kapp wanted to design something that would be
+        in balance with that building. But at the same time, the Rackham building
+        was at what was then the edge of campus, and so it was adjacent to a residential
+        area. The design, then, was kept low: the gabled roof and the strong horizontal
+        line visually bring it down to the ground. So the building formed a transition
+        between the large, massed structures of the University and the smaller buildings
+        of the surrounding neighborhood.\n\nKapp\u2019s affinity with classical styles
+        included the color schemes he chose for the interior, which, according to
+        Holleman, were earthy shades similar to those the Greeks created from natural
+        pigments. For instance, the walls of the main entrance hall were originally
+        painted Pompeiian red. (They were later repainted a light gray.) The building
+        is also replete with terra cottas and cerulean blues, all right out of the
+        Greek, and possibly the Pompeiian, repertoire. At the same time, the lavish
+        decorations on the ceilings, moldings, and walls are in keeping with the
+        Art Deco style, which was in vogue in the \u201930s.\n\nThe other striking
+        aspect of the interior is the way natural light and artificial light interact
+        in the different rooms. This too, Holleman explained, was carefully designed
+        by Kapp. You notice as you enter the main entrance hall that you go from
+        the light outdoors into a rather dark room. Now, if there is something going
+        on in the lecture hall, the lobby is lit and you are naturally drawn into
+        the activities. If not, then the lecture hall doors, which are covered in
+        dark blue leather, are closed, and your eyes are naturally drawn to either
+        side, where indirect light is spilling down the marble stairways. As you
+        proceed up the stairs, you are drawn either toward the lighter lounges, which
+        are illuminated by sunlight, or the central rotunda, which is bathed in indirect
+        light. Your movements through the building are directed by the patterns of
+        light and dark, and all this was carefully conceived by Kapp.\n\nIndeed,
+        right down to the finest detail, the building is Kapp\u2019s. The bronze
+        window and door casings, the ceiling decorations, the colors, the carpets,
+        the furniture \u2013 all were either designed directly by him or with his
+        close supervision. This was in the era when an architect was very reluctant
+        to turn over any part of a building to someone else for fear of losing the
+        integrity of the design, said Holleman. Nor were any parts of the building
+        simply ordered from a catalogue. They were designed by Kapp and made specifically
+        for the building \u2013 right down to the bronze doorknobs. It was an age,
+        also, when expert craftsmen were still available.\n\nElements such as the
+        sculpted forms of the building\u2019s facade, the exquisite bronze window
+        casings and the relief work in the interior, are the work of Corrado Parducci,
+        an architectural sculptor trained in his native Italy, who collaborated often
+        with Kapp. Together they recreated a number of classical forms. For example,
+        the bowl-shaped chandeliers in the massive study hall on the second floor
+        exactly mimic the Greek light fixtures, which in ancient times were filled
+        with oil that burned from a wick. The Greeks, of course, did not have desk
+        lamps, but the ones built into the study-hall tables at least capture the
+        spirit of the Greek design. The detailed decoration work found all over the
+        building was again Kapp\u2019s design, as was the furniture in the study
+        and lecture rooms, modeled on Chippendale, Queen Anne, and Duncan Phyfe precursors.\n\nThe
+        underlying philosophy for the design was to enhance all aspects of advanced
+        intellectual endeavor without regard to disciplinary boundaries. An information
+        booklet, prepared by the architect\u2019s firm when the building opened,
+        says: The varieties of ways by which new knowledge arises are not limited
+        to books, the classroom, and the laboratory. All those intellectual contacts
+        between individuals imbued with the curiosity to find out why things are
+        as they are offer such opportunities. The informal intercourse of minds is
+        often as significant as the formal search . . . . The building thus is conceived
+        as a center for gathering together those stirred by this fundamental curiosity
+        to know . . . The Graduate School Building . . . is neutral territory. In
+        discussion rooms, lecture halls, attractive lounging and common rooms, and
+        the reading room, the boundaries between subjects are less evident. The possibility
+        of intellectual recreation is evident, and the specialist has opportunity
+        to become a scholar.\n\nThe focal point for the building, and the part that
+        dictates the spaces around it, is the 1,200-seat lecture hall on the main
+        floor. Like the smaller and steeper amphitheatre on the top floor, the semi-circular
+        arrangement is classically Greek, as is the stage jutting into the room and
+        the absence of a proscenium. The two fluted columns on either side of the
+        stage accentuate the Neo-Greek atmosphere. The Art Deco work on the ceiling
+        is a spectacular intertwining gold-leaf pattern that converges over the stage.
+        The room also has one of the earliest uses of recessed lighting \u2013 a
+        departure from the usual chandeliers and a reflection of Kapp\u2019s sensitivity
+        to lighting design. It is a comfortable auditorium, with plushly upholstered
+        seats and ample leg room.\n\nThe room was designed with lectures in mind,
+        its built-in lectern on the stage and its projection screen concealed by
+        a curtain on the wall. In addition to this use, the room is occupied several
+        times each month by large groups attending conferences, conventions, and
+        symposia. perhaps one of the happier, and not wholly unforeseen, circumstances
+        is that the lecture hall is ideal for chamber music. The room is intimate
+        \u2013 all seats are close to the performers \u2013 and the acoustics satisfactory,
+        whether for a solo guitarist or an eighteen-piece ensemble.\n\nIt cannot
+        be said that William Kapp didn\u2019t foresee the use of his auditorium for
+        musical performance. He was very familiar with theater and concert hall design.
+        Indeed, one of his buildings was the Wilson Theater in Detroit, now called
+        The Music Hall, which has excellent acoustics.\n\nFormer University Musical
+        Society President Gail Rector was in the very first ensemble, in 1939, to
+        perform on Rackham\u2019s stage. Then a student in the School of Music, Rector
+        was a bassoonist in the University\u2019s Little S ymphony under the direction
+        of Thor Johnson. In an interview, Rector speculated it was Johnson\u2019s
+        idea to hold concerts there. The building, of course, was spanking new at
+        the time so it did not take long for the idea to occur to someone in the
+        sixty-two-year-old University Musical Society to present the first chamber
+        music festival there in 1941. The Musical Art Quartet of New York led off
+        the annual series, and was followed by the Roth Quartet. Next came the Budapest
+        String Quartet, a group which would return more frequently than- any other
+        during the twenty-seven years of these weekend festivals. The chamber festival
+        gradually expanded over the years into the present Chamber Arts Series, which
+        in recent times has included the Julliard String Quartet, the Beaux Arts
+        Trio, and many other famous ensembles. In the last five decades, the University
+        Musical Society has presented festivals of ballet, folk, and ethnic dance
+        on the Rackham stage.\n\nPerhaps the most original use of the building for
+        the performing arts occurred in 1976. A master\u2019s student in the School
+        of Dance choreographed a thesis presentation that was performed on the vast
+        terrace of the top floor \u2013 to the accompaniment of the Burton Tower
+        carillon. This unusual endeavor has been repeated a few times. The grand
+        terrace is often used in good weather by students and Rackham staff members
+        who want to take in the panoramic view of the rooftops of downtown Ann Arbor.\n\nThe
+        study lounges on the second floor were originally dubbed the Men\u2019s and
+        Women\u2019s Lounges, but in these egalitarian times (probably in the 1960\u2019s,
+        though no one is sure of the date) have been renamed the East and West Study
+        Halls. the quietness, warmth, and elegance of the rooms inspire focused attention
+        \u2013 although the plush furniture sometimes inspires a quick nap.\n\nThe
+        building also serves, of course, as administrative headquarters for the Graduate
+        School. The Dean\u2019s office is a large room on the southeast side of the
+        main floor. At the southwest corner is the meeting room for the Rackham Executive
+        Board, the decision-making body comprising the dean, associate deans, elected
+        faculty representatives from various departments, and Rackham Student Government
+        representatives.\n\nOn the ground level, which is almost a basement, the
+        east side offices are taken up by the graduate student services offices (Admissions,
+        Academic Records Dissertations, Fellowships and Recruitment).\n\nIt is almost
+        impossible to imagine what it would cost to build the Rackham building today.
+        The thought of marble stairs with bronze railings would send shudders through
+        any budget manager. In this era of public funding, streamlining and stripped
+        down forms are the order. And even finding the craftsmen and materials would
+        be a challenge: where in the 1920s there may have been thirty marble companies
+        in the Ann Arbor-Detroit area, today there are only three. But Tom Holleman,
+        the architectural historian, wondered if cost is really the problem, or if
+        some deeper principle has been sacrificed.\n\nI think this is more a reflection
+        of how we philosophically approach the use of materials these days. Take
+        this building, for example, he said, referring to the Renaissance Center,
+        the pride and joy of Detroit;The roof of this building may be guaranteed
+        to last twenty years \u2013 no more. After that it has to be fixed. The walls
+        may be good for twenty-five to thirty; same for the aluminum window casings.
+        Now, compare that to a building like the Rackham building. If you use the
+        best materials and the best craftsmen to start out with, there\u2019s no
+        reason why a building shouldn\u2019t last a thousand years.\n\nThe Rackham
+        building, in all its glory, looks as if it is here to stay.\n\nfrom an article
+        by John O. Biderman"
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -9611,7 +9818,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 48338788076444d35ba910c282422cb4, type: 2}
+      objectReference: {fileID: 2100000, guid: ef0e898ea2df248e0b2b11acfd08f7ef, type: 2}
     - target: {fileID: 6813907045951404477, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -9645,17 +9852,12 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: '<b>EECS Building</b>
+      value: '<b>STAMPS Auditorium</b>
 
 
-        The Computer Science and Engineering
-        (CSE) Division of the Electrical Engineering and Computer Science (EECS)
-        Department at the University of Michigan (UM) traces its formal founding
-        to 1957 with roots in the 1940s.
-
-
-        In 1983, a $30M building on North
-        Campus was approved. Three years later, most moved into the new EECS Building.'
+        This smaller auditorium that seats
+        approximately 445 hosts many lectures and performing arts events for the
+        U-M School of Music, Theater & Dance.'
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -10845,6 +11047,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6813907045767737244, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 2221c100ddf63423c9f524b2d12ba589, type: 2}
     - target: {fileID: 6813907045951404477, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -10874,6 +11081,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
+        type: 3}
+      propertyPath: m_text
+      value: "<b>The UGLI</b>\n\nThe Shapiro Undergraduate Library (UgLi) provides
+        services, spaces, and collections tailored to undergraduate students. Bert\u2019s
+        Cafe is located in the foyer of the Library allows for ease of access to
+        coffee, snacks, or meals"
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -11319,7 +11534,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 48338788076444d35ba910c282422cb4, type: 2}
+      objectReference: {fileID: 2100000, guid: 6c7df1a25d6c449a5b816d4626593d0a, type: 2}
     - target: {fileID: 6813907045951404477, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -11353,17 +11568,23 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: '<b>EECS Building</b>
-
-
-        The Computer Science and Engineering
-        (CSE) Division of the Electrical Engineering and Computer Science (EECS)
-        Department at the University of Michigan (UM) traces its formal founding
-        to 1957 with roots in the 1940s.
-
-
-        In 1983, a $30M building on North
-        Campus was approved. Three years later, most moved into the new EECS Building.'
+      value: "<b>Ford Robotics Building</b>\n\nOpened in 2021, the Ford Robotics
+        building is the home of Michigan Robotics. The 134,000-square-foot, four-story
+        complex houses classrooms, offices, a cafe, and a startup-style open collaboration
+        area and tailored lab space for a variety of robotic technologies.\n\nThe
+        Ford Robotics Building brings all parts of the robotics enterprise together
+        for real-world results.\n\nThe new building is designed to promote collaborative
+        work across disciplines, involving students and faculty at all levels, from
+        a variety of fields. It also promotes collaboration with external partners,
+        including the Ford Motor Company, who have a permanent presence on site.
+        It has spaces for teaching, experimentation, and testing, in purpose-built
+        bays and laboratories that represent the state of the art. \n\nThese facilities
+        support a particularly distinctive characteristic of Michigan Robotics: its
+        focus on hardware as well as software.\n\nMichigan Robotics emphasizes making
+        real robots. Many roboticists specialize in simulations, but implementing
+        a real machine in the real world poses real challenges. These new spaces
+        enable Michigan roboticists to take full advantage of their hands-on orientation
+        in research and teaching, as they work to build machines that better society."
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
