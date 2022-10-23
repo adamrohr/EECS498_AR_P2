@@ -9,6 +9,8 @@ public class MarkerInteraction : MonoBehaviour
 {
     private string _name = new string("");
     private GameObject _info;
+    private int _itemUnlock;
+    [SerializeField] private ItemTracker inv;
     
     // Start is called before the first frame update
     void Start()
@@ -31,9 +33,15 @@ public class MarkerInteraction : MonoBehaviour
     {
         _info = info;
     }
+    
+    public void SetItemUnlock(int num)
+    {
+        _itemUnlock = num;
+    }
 
     private void OnMouseDown()
     {
         _info.SetActive(true);
+        inv.UnlockSeed(_itemUnlock);
     }
 }

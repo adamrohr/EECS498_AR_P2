@@ -40,7 +40,7 @@ namespace Mapbox.Examples
 			{new Vector2d(42.275541, -83.740404), "Orion Statue - UMMA"},
 			{new Vector2d(42.294468, -83.709906), "Ford Robotics Building"}
 		};
-
+		
 		void Start()
 		{
 			_locations = new Vector2d[_locationStrings.Length];
@@ -55,6 +55,7 @@ namespace Mapbox.Examples
 				instance.GetComponent<MarkerInteraction>().SetMarkerName(markers[_locations[i]]);
 				// TODO: Don't use Find
 				instance.GetComponent<MarkerInteraction>().SetInfoObject(GameObject.Find(markers[_locations[i]]));
+				instance.GetComponent<MarkerInteraction>().SetItemUnlock(i + 1);
 				GameObject.Find(markers[_locations[i]]).SetActive(false);
 				_spawnedObjects.Add(instance);
 			}

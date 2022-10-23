@@ -2102,6 +2102,8 @@ GameObject:
   - component: {fileID: 388525036}
   - component: {fileID: 388525037}
   - component: {fileID: 388525038}
+  - component: {fileID: 388525040}
+  - component: {fileID: 388525039}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -2222,21 +2224,21 @@ MonoBehaviour:
     type: 3}
   gameobject_to_spawn_1: {fileID: 2441779057326299809, guid: 4e9f5b3ff3b6fa4aaa4678ac8bf8e429,
     type: 3}
-  gameobject_to_spawn_2: {fileID: 1332680640941198, guid: 6307fd731e2247b479cddefb30b094fa,
+  gameobject_to_spawn_2: {fileID: 192044, guid: 19682540d8a014522a319b1cf788aee2,
     type: 3}
-  gameobject_to_spawn_3: {fileID: 1473601184474156, guid: 67762154df3b7ca4eaaebcc646c11bbf,
+  gameobject_to_spawn_3: {fileID: 1332680640941198, guid: 6307fd731e2247b479cddefb30b094fa,
     type: 3}
-  gameobject_to_spawn_4: {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732,
+  gameobject_to_spawn_4: {fileID: 1473601184474156, guid: 67762154df3b7ca4eaaebcc646c11bbf,
     type: 3}
-  gameobject_to_spawn_5: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739,
+  gameobject_to_spawn_5: {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732,
     type: 3}
-  gameobject_to_spawn_6: {fileID: 4521090229625430784, guid: 874e3a4a755ef9e639594d1f5df968d1,
+  gameobject_to_spawn_6: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739,
     type: 3}
-  gameobject_to_spawn_7: {fileID: 4124323062290505003, guid: e021f2107856b97978976612624c27b8,
+  gameobject_to_spawn_7: {fileID: 137650, guid: 826b6a0b570e8460990010fa615b5a2a,
     type: 3}
-  gameobject_to_spawn_8: {fileID: 919132149155446097, guid: b61cbb3a5418451ef879c216ad91ec47,
+  gameobject_to_spawn_8: {fileID: 4521090229625430784, guid: 874e3a4a755ef9e639594d1f5df968d1,
     type: 3}
-  gameobject_to_spawn_9: {fileID: 919132149155446097, guid: dab065333028e7dbc8bdea91c6e0e797,
+  gameobject_to_spawn_9: {fileID: 4124323062290505003, guid: e021f2107856b97978976612624c27b8,
     type: 3}
   spawn_sound_effect: {fileID: 8300000, guid: ce408681c72ca4e4695251acf937779c, type: 3}
   spawnScale: 0.2
@@ -2252,6 +2254,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79877a951d4c471db09746081299da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!114 &388525039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388525029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef05e267b8b9f4e4a8e357028f238923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeablePrefab: {fileID: 6007246997187748386, guid: 0c44d93adc35f48a3bd76e4ddc04e1e2,
+    type: 3}
+  currency: {fileID: 7220178}
+--- !u!114 &388525040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388525029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedLibrary: {fileID: 11400000, guid: 56cd3cfea0ca645e8ac96e1f1ec9cd4d,
+    type: 2}
+  m_MaxNumberOfMovingImages: 4
+  m_TrackedImagePrefab: {fileID: 729471511575044848, guid: 3cc3776a3a9a143c888edfcc1d8ebe37,
+    type: 3}
 --- !u!1 &423127056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,6 +3186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79877a951d4c471db09746081299da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &508809658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8307,6 +8343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79877a951d4c471db09746081299da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 22732919}
 --- !u!1 &1529982477
 GameObject:
   m_ObjectHideFlags: 0
@@ -9018,6 +9055,7 @@ GameObject:
   - component: {fileID: 1651748854}
   - component: {fileID: 1651748853}
   - component: {fileID: 1651748852}
+  - component: {fileID: 1651748855}
   m_Layer: 5
   m_Name: Acorn
   m_TagString: Untagged
@@ -9103,6 +9141,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1651748855}
+        m_TargetAssemblyTypeName: ThrowObject, Assembly-CSharp
+        m_MethodName: Throw
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1651748853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9141,6 +9191,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651748850}
   m_CullTransparentMesh: 1
+--- !u!114 &1651748855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651748850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d50ad7ec327e4fbb968fdc8e889ed98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 6007246997187748386, guid: af19d02def3bd4d1b8c78fe2cc01052e, type: 3}
+  cursor: {fileID: 223974227}
+  spawn_sound_effect: {fileID: 8300000, guid: 06eca702993a54901ac69bdbf4d0d6e5, type: 3}
 --- !u!1 &1652433711
 GameObject:
   m_ObjectHideFlags: 0

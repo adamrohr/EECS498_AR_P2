@@ -1347,6 +1347,7 @@ MonoBehaviour:
   squirrelPrefab: {fileID: 919132149155446097, guid: cd8a7f25d3e1d4bd5ba15864c3210254,
     type: 3}
   spawnScale: 5
+  squirrelScale: 0.3
 --- !u!1 &137357532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,15 +2313,16 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: "<b>Orion Statue - UMMA</b>\n\nMark di Suvero, who once described his
-        work as \u201Cpainting in three dimensions,\u201D draws inspiration from
-        many sources, including mathematics, physics, music, and astronomy, to create
-        large-scale sculptures with a sense of geometry and structure. Like many
-        of his works, Orion\u2014titled after the famed hunter from Greek mythology
-        after whom the constellation is named\u2014is painted bright orange-red,
-        creating a striking contrast with the sky and the work\u2019s surroundings.
-        Since it is meant to be viewed from a variety of angles and positions, the
-        artist paid careful attention to the balance of forms and space."
+      value: "<b>Orion Statue - UMMA</b>\n\nSeed Unlocked: Seed 9\n\nMark di Suvero,
+        who once described his work as \u201Cpainting in three dimensions,\u201D
+        draws inspiration from many sources, including mathematics, physics, music,
+        and astronomy, to create large-scale sculptures with a sense of geometry
+        and structure. Like many of his works, Orion\u2014titled after the famed
+        hunter from Greek mythology after whom the constellation is named\u2014is
+        painted bright orange-red, creating a striking contrast with the sky and
+        the work\u2019s surroundings. Since it is meant to be viewed from a variety
+        of angles and positions, the artist paid careful attention to the balance
+        of forms and space."
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -2804,28 +2806,31 @@ PrefabInstance:
       value: '<b>Angell Hall</b>
 
 
-        Angell Hall was the cornerstone of the
-        building program inaugurated by President Burton in 1920. Old University
-        Hall could no longer house the growing College of Literature, Science and
-        Arts. Due to overcrowding, classes were held in several other buildings,
-        some classes were simply cancelled, and several classrooms were partitioned.
-        Since College was central to the University''s administrative and educational
-        functions, the new building was conceived of as the central building on campus.
-        President Burton said, "It [should] be beautiful, dignified, and commanding.
-        It [should] help give unity and form to the entire campus." To match the
-        appearance of surrounding structures, such as Hill Auditorium, Alumni Memorial
-        Hall, and the Clements Library, planners of the building chose a classic
-        design.
+        Seed Unlocked: Seed 1
 
 
-        Albert Kahn designed the structure, which extended 480
-        feet along State Street. The entrance portico followed a classical model,
-        with eight huge Doric columns surmounting a wide esplanade of steps. Several
-        sculptures and mottos carved above the main door and the columns symbolize
-        educational values. With four floors and 152,000 square feet of space, the
-        building originally housed numerous classrooms and offices, and the Dean
-        of LSA. For several years, the President and other officers also occupied
-        offices in Angell Hall. '
+        Angell
+        Hall was the cornerstone of the building program inaugurated by President
+        Burton in 1920. Old University Hall could no longer house the growing College
+        of Literature, Science and Arts. Due to overcrowding, classes were held in
+        several other buildings, some classes were simply cancelled, and several
+        classrooms were partitioned. Since College was central to the University''s
+        administrative and educational functions, the new building was conceived
+        of as the central building on campus. President Burton said, "It [should]
+        be beautiful, dignified, and commanding. It [should] help give unity and
+        form to the entire campus." To match the appearance of surrounding structures,
+        such as Hill Auditorium, Alumni Memorial Hall, and the Clements Library,
+        planners of the building chose a classic design.
+
+
+        Albert Kahn designed
+        the structure, which extended 480 feet along State Street. The entrance portico
+        followed a classical model, with eight huge Doric columns surmounting a wide
+        esplanade of steps. Several sculptures and mottos carved above the main door
+        and the columns symbolize educational values. With four floors and 152,000
+        square feet of space, the building originally housed numerous classrooms
+        and offices, and the Dean of LSA. For several years, the President and other
+        officers also occupied offices in Angell Hall. '
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -3681,6 +3686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79877a951d4c471db09746081299da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1883403352}
 --- !u!1 &646379807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,7 +4049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00006866455}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2000, y: 150}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &722847112
@@ -4058,7 +4064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 0
 --- !u!1001 &725381757
 PrefabInstance:
@@ -4240,20 +4246,20 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: "<b>Hatcher Graduate Library</b>\n\nFrom the birth of the University
-        of Michigan in 1837 the creation and maintenance of a library was\nprioritized
-        by the Legislature and the Board of Regents. Audubon's Birds of America,
-        the library\u2019s first purchase, was acquired in 1838 and within a couple
-        of years the library\u2019s collection had grown to over 3,400 volumes.\n\nNo
-        separate library building yet existed and the books were housed in a variety
-        of different locations from the Law Building to professors\u2019 houses.
-        In 1883 the first library building was completed but the space for the collections
-        and for use of the collections soon became insufficient.\n\nA new building,
-        designed by renowned architect Albert Kahn, was completed in 1920. For the
-        next 50 years the collections continued to grow in size and diversity and
-        an eight story addition to the Library was built in 1970, the first high
-        rise on central campus. In 1971 the two adjoined library buildings were named
-        the Harlan Hatcher Graduate Library."
+      value: "<b>Hatcher Graduate Library</b>\n\nSeed Unlocked: Seed 8\n\nFrom the
+        birth of the University of Michigan in 1837 the creation and maintenance
+        of a library was\nprioritized by the Legislature and the Board of Regents.
+        Audubon's Birds of America, the library\u2019s first purchase, was acquired
+        in 1838 and within a couple of years the library\u2019s collection had grown
+        to over 3,400 volumes.\n\nNo separate library building yet existed and the
+        books were housed in a variety of different locations from the Law Building
+        to professors\u2019 houses. In 1883 the first library building was completed
+        but the space for the collections and for use of the collections soon became
+        insufficient.\n\nA new building, designed by renowned architect Albert Kahn,
+        was completed in 1920. For the next 50 years the collections continued to
+        grow in size and diversity and an eight story addition to the Library was
+        built in 1970, the first high rise on central campus. In 1971 the two adjoined
+        library buildings were named the Harlan Hatcher Graduate Library."
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -5310,73 +5316,74 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: "<b>Rackham</b>\n\nIn 1935, University President Alexander G. Ruthven
-        wrote to the trustees of the Rackham Fund to offer them what he called the
-        very heart of the University. He persuaded them to donate money for construction
-        of a building, bearing Rackham\u2019s name, that would house the graduate-school
-        administration and serve as a focal point for graduate activities on campus.
-        A separate graduate school had existed since 1912, but had never had its
-        own headquarters. Eventually, $2.5 million were donated for the land, the
-        buildings and the furnishings (construction of the building would cost $13,000
-        less than the contractors originally estimated), as well as a $4 million
-        endowment to sponsor research and publication by graduate students and faculty.\n\nThe
-        contract for design of the Rackham building went to Smith, Hinchman Grylls,
-        then as now one of Detroit\u2019s largest architectural firms, and was assigned
-        to William E. Kapp, one of the brilliant young designers on the staff. Kapp
-        had been trained at the University of Pennsylvania, and worked for several
-        years under Albert Kahn, Detroit\u2019s most famous architect and Smith,
-        Hinchman Grylls\u2019 main competitor. Unlike Kahn\u2019s firm, Smith, Hinchman
-        Grylls had a reputation for allowing their designers individual freedom,
-        so Kapp moved to that firm in 1920. He stayed through the Depression, when
-        he left to start his own architectural firm. The Rackham building was his
-        last design for Smith, Hinchman Grylls. Ground for it was broken in May 1936,
-        and it was officially dedicated in June 1938. Kapp did well for his firm:
-        in 1980, Rackham\u2019s endurance and beauty were recognized by the Building
-        Stone Institute\u2019s Tucker Award.\n\nThe building, which is made of Indiana
-        limestone and has a copper roof, was designed with tremendous sensitivity
-        to the surrounding area. For one thing, it was the terminus for the Ingalls
-        Street mall [in 1980, S. Ingalls, a one-block street running between N. University
-        And E. Washington, was replaced with a brick and grass pedestrian walkway],
-        beyond the opposite end of which is the Graduate Library, designed by Kapp\u2019s
-        former mentor, Albert Kahn. Kapp wanted to design something that would be
-        in balance with that building. But at the same time, the Rackham building
-        was at what was then the edge of campus, and so it was adjacent to a residential
-        area. The design, then, was kept low: the gabled roof and the strong horizontal
-        line visually bring it down to the ground. So the building formed a transition
-        between the large, massed structures of the University and the smaller buildings
-        of the surrounding neighborhood.\n\nKapp\u2019s affinity with classical styles
-        included the color schemes he chose for the interior, which, according to
-        Holleman, were earthy shades similar to those the Greeks created from natural
-        pigments. For instance, the walls of the main entrance hall were originally
-        painted Pompeiian red. (They were later repainted a light gray.) The building
-        is also replete with terra cottas and cerulean blues, all right out of the
-        Greek, and possibly the Pompeiian, repertoire. At the same time, the lavish
-        decorations on the ceilings, moldings, and walls are in keeping with the
-        Art Deco style, which was in vogue in the \u201930s.\n\nThe other striking
-        aspect of the interior is the way natural light and artificial light interact
-        in the different rooms. This too, Holleman explained, was carefully designed
-        by Kapp. You notice as you enter the main entrance hall that you go from
-        the light outdoors into a rather dark room. Now, if there is something going
-        on in the lecture hall, the lobby is lit and you are naturally drawn into
-        the activities. If not, then the lecture hall doors, which are covered in
-        dark blue leather, are closed, and your eyes are naturally drawn to either
-        side, where indirect light is spilling down the marble stairways. As you
-        proceed up the stairs, you are drawn either toward the lighter lounges, which
-        are illuminated by sunlight, or the central rotunda, which is bathed in indirect
-        light. Your movements through the building are directed by the patterns of
-        light and dark, and all this was carefully conceived by Kapp.\n\nIndeed,
-        right down to the finest detail, the building is Kapp\u2019s. The bronze
-        window and door casings, the ceiling decorations, the colors, the carpets,
-        the furniture \u2013 all were either designed directly by him or with his
-        close supervision. This was in the era when an architect was very reluctant
-        to turn over any part of a building to someone else for fear of losing the
-        integrity of the design, said Holleman. Nor were any parts of the building
-        simply ordered from a catalogue. They were designed by Kapp and made specifically
-        for the building \u2013 right down to the bronze doorknobs. It was an age,
-        also, when expert craftsmen were still available.\n\nElements such as the
-        sculpted forms of the building\u2019s facade, the exquisite bronze window
-        casings and the relief work in the interior, are the work of Corrado Parducci,
-        an architectural sculptor trained in his native Italy, who collaborated often
+      value: "<b>Rackham</b>\n\nSeed Unlocked: Seed 5\n\nIn 1935, University President
+        Alexander G. Ruthven wrote to the trustees of the Rackham Fund to offer them
+        what he called the very heart of the University. He persuaded them to donate
+        money for construction of a building, bearing Rackham\u2019s name, that would
+        house the graduate-school administration and serve as a focal point for graduate
+        activities on campus. A separate graduate school had existed since 1912,
+        but had never had its own headquarters. Eventually, $2.5 million were donated
+        for the land, the buildings and the furnishings (construction of the building
+        would cost $13,000 less than the contractors originally estimated), as well
+        as a $4 million endowment to sponsor research and publication by graduate
+        students and faculty.\n\nThe contract for design of the Rackham building
+        went to Smith, Hinchman Grylls, then as now one of Detroit\u2019s largest
+        architectural firms, and was assigned to William E. Kapp, one of the brilliant
+        young designers on the staff. Kapp had been trained at the University of
+        Pennsylvania, and worked for several years under Albert Kahn, Detroit\u2019s
+        most famous architect and Smith, Hinchman Grylls\u2019 main competitor. Unlike
+        Kahn\u2019s firm, Smith, Hinchman Grylls had a reputation for allowing their
+        designers individual freedom, so Kapp moved to that firm in 1920. He stayed
+        through the Depression, when he left to start his own architectural firm.
+        The Rackham building was his last design for Smith, Hinchman Grylls. Ground
+        for it was broken in May 1936, and it was officially dedicated in June 1938.
+        Kapp did well for his firm: in 1980, Rackham\u2019s endurance and beauty
+        were recognized by the Building Stone Institute\u2019s Tucker Award.\n\nThe
+        building, which is made of Indiana limestone and has a copper roof, was designed
+        with tremendous sensitivity to the surrounding area. For one thing, it was
+        the terminus for the Ingalls Street mall [in 1980, S. Ingalls, a one-block
+        street running between N. University And E. Washington, was replaced with
+        a brick and grass pedestrian walkway], beyond the opposite end of which is
+        the Graduate Library, designed by Kapp\u2019s former mentor, Albert Kahn.
+        Kapp wanted to design something that would be in balance with that building.
+        But at the same time, the Rackham building was at what was then the edge
+        of campus, and so it was adjacent to a residential area. The design, then,
+        was kept low: the gabled roof and the strong horizontal line visually bring
+        it down to the ground. So the building formed a transition between the large,
+        massed structures of the University and the smaller buildings of the surrounding
+        neighborhood.\n\nKapp\u2019s affinity with classical styles included the
+        color schemes he chose for the interior, which, according to Holleman, were
+        earthy shades similar to those the Greeks created from natural pigments.
+        For instance, the walls of the main entrance hall were originally painted
+        Pompeiian red. (They were later repainted a light gray.) The building is
+        also replete with terra cottas and cerulean blues, all right out of the Greek,
+        and possibly the Pompeiian, repertoire. At the same time, the lavish decorations
+        on the ceilings, moldings, and walls are in keeping with the Art Deco style,
+        which was in vogue in the \u201930s.\n\nThe other striking aspect of the
+        interior is the way natural light and artificial light interact in the different
+        rooms. This too, Holleman explained, was carefully designed by Kapp. You
+        notice as you enter the main entrance hall that you go from the light outdoors
+        into a rather dark room. Now, if there is something going on in the lecture
+        hall, the lobby is lit and you are naturally drawn into the activities. If
+        not, then the lecture hall doors, which are covered in dark blue leather,
+        are closed, and your eyes are naturally drawn to either side, where indirect
+        light is spilling down the marble stairways. As you proceed up the stairs,
+        you are drawn either toward the lighter lounges, which are illuminated by
+        sunlight, or the central rotunda, which is bathed in indirect light. Your
+        movements through the building are directed by the patterns of light and
+        dark, and all this was carefully conceived by Kapp.\n\nIndeed, right down
+        to the finest detail, the building is Kapp\u2019s. The bronze window and
+        door casings, the ceiling decorations, the colors, the carpets, the furniture
+        \u2013 all were either designed directly by him or with his close supervision.
+        This was in the era when an architect was very reluctant to turn over any
+        part of a building to someone else for fear of losing the integrity of the
+        design, said Holleman. Nor were any parts of the building simply ordered
+        from a catalogue. They were designed by Kapp and made specifically for the
+        building \u2013 right down to the bronze doorknobs. It was an age, also,
+        when expert craftsmen were still available.\n\nElements such as the sculpted
+        forms of the building\u2019s facade, the exquisite bronze window casings
+        and the relief work in the interior, are the work of Corrado Parducci, an
+        architectural sculptor trained in his native Italy, who collaborated often
         with Kapp. Together they recreated a number of classical forms. For example,
         the bowl-shaped chandeliers in the massive study hall on the second floor
         exactly mimic the Greek light fixtures, which in ancient times were filled
@@ -5800,21 +5807,21 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: "<b>Bob and Betty Beyster Building</b>\n\nThe Bob and Betty Beyster
-        Building, completed in 2005 and built with alumni funds, is the home of CSE
-        and a destination for events and gatherings on the U-M North Campus. Designed
-        to bring in and reflect natural light and featuring a spacious four-story
-        atrium along with 100,000 square feet of lab, office, and meeting space,
-        the Beyster Building encourages and precipitates interaction, creativity,
-        and collaboration.\n\nNamed for four-time U-M alumnus, entrepreneur, and
-        philanthropist Dr. J. Robert Beyster and his wife Betty, the Beyster Building
-        features a spectacular four-story spiral staircase that winds by lounge areas
-        on each floor; those spaces offer faculty and students places to mingle or
-        hold spontaneous conversations and impromptu meetings.\n\nInside the diag
-        entrance to the atrium, visitors will find one of the most significant remaining
-        displays of the ENIAC \u2013 announced in 1946 and widely considered to be
-        the first electronic general-purpose computer \u2013 which was built in part
-        by Arthur Burks, founder of the program in computing at Michigan."
+      value: "<b>Bob and Betty Beyster Building</b>\n\nSeed Unlocked: Seed 3\n\nThe
+        Bob and Betty Beyster Building, completed in 2005 and built with alumni funds,
+        is the home of CSE and a destination for events and gatherings on the U-M
+        North Campus. Designed to bring in and reflect natural light and featuring
+        a spacious four-story atrium along with 100,000 square feet of lab, office,
+        and meeting space, the Beyster Building encourages and precipitates interaction,
+        creativity, and collaboration.\n\nNamed for four-time U-M alumnus, entrepreneur,
+        and philanthropist Dr. J. Robert Beyster and his wife Betty, the Beyster
+        Building features a spectacular four-story spiral staircase that winds by
+        lounge areas on each floor; those spaces offer faculty and students places
+        to mingle or hold spontaneous conversations and impromptu meetings.\n\nInside
+        the diag entrance to the atrium, visitors will find one of the most significant
+        remaining displays of the ENIAC \u2013 announced in 1946 and widely considered
+        to be the first electronic general-purpose computer \u2013 which was built
+        in part by Arthur Burks, founder of the program in computing at Michigan."
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -6812,7 +6819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49.99994, y: -200.00006}
+  m_AnchoredPosition: {x: -49.999878, y: -200}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1038541086
@@ -6827,6 +6834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79877a951d4c471db09746081299da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &1038541087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9004,14 +9012,18 @@ PrefabInstance:
       value: '<b>EECS Building</b>
 
 
-        The Computer Science and Engineering
-        (CSE) Division of the Electrical Engineering and Computer Science (EECS)
-        Department at the University of Michigan (UM) traces its formal founding
-        to 1957 with roots in the 1940s.
+        Seed Unlocked: Seed 6
 
 
-        In 1983, a $30M building on North
-        Campus was approved. Three years later, most moved into the new EECS Building.'
+        The
+        Computer Science and Engineering (CSE) Division of the Electrical Engineering
+        and Computer Science (EECS) Department at the University of Michigan (UM)
+        traces its formal founding to 1957 with roots in the 1940s.
+
+
+        In
+        1983, a $30M building on North Campus was approved. Three years later, most
+        moved into the new EECS Building.'
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -9185,7 +9197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 0}
+  m_Content: {fileID: 722847111}
   m_Horizontal: 1
   m_Vertical: 0
   m_MovementType: 1
@@ -9855,9 +9867,12 @@ PrefabInstance:
       value: '<b>STAMPS Auditorium</b>
 
 
-        This smaller auditorium that seats
-        approximately 445 hosts many lectures and performing arts events for the
-        U-M School of Music, Theater & Dance.'
+        Seed Unlocked: Seed 7
+
+
+        This
+        smaller auditorium that seats approximately 445 hosts many lectures and performing
+        arts events for the U-M School of Music, Theater & Dance.'
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -11085,10 +11100,10 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: "<b>The UGLI</b>\n\nThe Shapiro Undergraduate Library (UgLi) provides
-        services, spaces, and collections tailored to undergraduate students. Bert\u2019s
-        Cafe is located in the foyer of the Library allows for ease of access to
-        coffee, snacks, or meals"
+      value: "<b>The UGLI</b>\n\nSeed Unlocked: Seed 4\n\nThe Shapiro Undergraduate
+        Library (UgLi) provides services, spaces, and collections tailored to undergraduate
+        students. Bert\u2019s Cafe is located in the foyer of the Library allows
+        for ease of access to coffee, snacks, or meals"
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
@@ -11568,10 +11583,10 @@ PrefabInstance:
     - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}
       propertyPath: m_text
-      value: "<b>Ford Robotics Building</b>\n\nOpened in 2021, the Ford Robotics
-        building is the home of Michigan Robotics. The 134,000-square-foot, four-story
-        complex houses classrooms, offices, a cafe, and a startup-style open collaboration
-        area and tailored lab space for a variety of robotic technologies.\n\nThe
+      value: "<b>Ford Robotics Building</b>\n\nSeed Unlocked: Seed 10\n\nOpened in
+        2021, the Ford Robotics building is the home of Michigan Robotics. The 134,000-square-foot,
+        four-story complex houses classrooms, offices, a cafe, and a startup-style
+        open collaboration area and tailored lab space for a variety of robotic technologies.\n\nThe
         Ford Robotics Building brings all parts of the robotics enterprise together
         for real-world results.\n\nThe new building is designed to promote collaborative
         work across disciplines, involving students and faculty at all levels, from
@@ -12215,6 +12230,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869581678}
   m_CullTransparentMesh: 1
+--- !u!1 &1883403352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1065618987163410, guid: 35ce2bb4caba9434db5e656796b632b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 843921207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1889117305
 GameObject:
   m_ObjectHideFlags: 0
@@ -13481,6 +13502,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1449051924554379341, guid: 3b05d594cce2543979513e78d903857f,
+        type: 3}
+      propertyPath: inv
+      value: 
+      objectReference: {fileID: 1347463308}
     - target: {fileID: 3929413350646648991, guid: 3b05d594cce2543979513e78d903857f,
         type: 3}
       propertyPath: m_RootOrder
@@ -13709,6 +13735,34 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813907045951404478, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
+        type: 3}
+      propertyPath: m_text
+      value: "<b>Duderstadt Center</b>\n\nSeed Unlocked: Seed 2\n\nThe James and
+        Anne Duderstadt Center, formerly known as the Media Union, opened in 1996
+        as a special place to provide faculty and students with the tools and collaborative
+        space for creating the future. Located on the University of Michigan North
+        Campus, the Duderstadt Center houses the Art, Architecture, and Engineering
+        Library, the College of Engineering Computer Aided Engineering Network (CAEN),
+        the Digital Media Commons, and the Millennium Project, the building provides
+        a nexus for creative and technological innovation across disciplines. The
+        Mujo Cafe provides a space for refreshment and social interaction.\n\nWith
+        more than 400 computers, provisioned with extensive software offerings, the
+        Duderstadt Center is the largest public computing site at the University
+        of Michigan. It also offers student access to 3D and virtual reality labs,
+        a large video production studio, three state-of-the-art audio recording studios,
+        advanced video conferencing resources, and unique collaboration rooms. The
+        AAEL (U-M Library) engineering resources are among the most comprehensive
+        in the country with large portions of its journal holdings being available
+        electronically. The library\u2019s Special Collections and Visual Resources
+        Collection (Imageworks) offer special resources to support the School of
+        Art and Design, and the College of Architecture and Urban Planning.\n\nDesigned
+        by Albert Kahn Associates of Detroit, the 250,000 square-foot Duderstadt
+        Center (DC) features a vast north-facing expanse of glass that illuminates
+        the first floor Atrium, its colorful mural \u201CEuclid\u2019s Comet\u201D
+        by Dorothea Rockburne, and the second floor library lobby. Pyramidal skylights
+        atop the Atrium further enhances the openness of these common areas."
       objectReference: {fileID: 0}
     - target: {fileID: 6813907046100999298, guid: 5d6e5bf73c53f4d43af1268cf58189b4,
         type: 3}

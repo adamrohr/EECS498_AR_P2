@@ -5,12 +5,12 @@ using TMPro;
 public class ItemTracker : MonoBehaviour
 {
     // Start is called before the first frame update
-    private static int[] _items = new int[11]{1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private static int[] _items = new int[11]{10, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     private int[] _itemPrices = new int[11] {5, 5, 7, 10, 12, 15, 17, 20, 25, 30 ,50};
-    private bool[] _itemsEnabled = new bool[11] { true, false, false, false, false, false, false, false, false, false, false};
+    private static bool[] _itemsEnabled = new bool[11] { true, false, false, false, false, false, false, false, false, false, false};
     private static List<int> _seedsPlanted = new List<int>();
+    
     [SerializeField] private Currency currency;
-
     [SerializeField] private TextMeshProUGUI acorns;
     [SerializeField] private TextMeshProUGUI mySeeds0;
     [SerializeField] private TextMeshProUGUI mySeeds1;
@@ -82,6 +82,14 @@ public class ItemTracker : MonoBehaviour
         for (int i = 0; i < _items.Length; ++i)
         {
             _itemTexts[i].text = _items[i].ToString();
+        }
+    }
+
+    public void UnlockSeed(int item)
+    {
+        if (!_itemsEnabled[item])
+        {
+            _itemsEnabled[item] = true;
         }
     }
 }

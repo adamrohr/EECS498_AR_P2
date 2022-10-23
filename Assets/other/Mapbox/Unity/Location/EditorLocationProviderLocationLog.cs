@@ -105,5 +105,10 @@
 			playerLocation = _currentLocation.LatitudeLongitude;
 			treeSpawn.SetPlayerLocation(playerLocation);
 		}
+
+		public Vector2d GetPlayerLocation()
+		{
+			return playerLocation;
+		}
 	}
 }
