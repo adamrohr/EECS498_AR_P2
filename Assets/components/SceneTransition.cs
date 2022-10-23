@@ -10,7 +10,18 @@ public class SceneTransition : MonoBehaviour
 {
     private static bool isExplore = true;
     [SerializeField] private GameObject player;
+    [SerializeField] private AudioSource _squirrelAttackMusic;
     private static GameObject treeToLoad = null;
+    private static bool squirrelAttacking = false;
+
+    private void Start() {
+        print("Start Squirrel Attacking: " + squirrelAttacking);
+        if(squirrelAttacking && !isExplore) {
+            _squirrelAttackMusic.Play();
+        } else {
+            _squirrelAttackMusic.Stop();
+        }
+    }
 
     public void SwitchModes() {
         if(!isExplore)
@@ -35,6 +46,8 @@ public class SceneTransition : MonoBehaviour
             if (shortestDist < 10)
             {
                 treeToLoad = closestObj;
+                // Only children of the tree will be squirrels
+                squirrelAttacking = treeToLoad.transform.childCount > 0;
             }
             SceneManager.LoadScene("interaction_scene", LoadSceneMode.Single);
         }

@@ -32,7 +32,9 @@ public class TreeSpawn : MonoBehaviour
     private GameObject[] treePrefabs = new GameObject[10];
 
     private static int[] _treesSpawned = new int[]{0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0};
-    private List<int> _squirrelTreesOrder = new List<int>();
+    private List<int> _treesOrder = new List<int>();
+    private List<int> _squirrelTrees = new List<int>();
+    private List<GameObject> _treeObjects = new List<GameObject>();
 
     [SerializeField] float spawnScale = .2f;
     [SerializeField] float squirrelScale = .3f;
@@ -72,31 +74,34 @@ public class TreeSpawn : MonoBehaviour
         timer += Time.deltaTime;
         int seconds = (int)timer % 60;
         List<Vector2d> locations = objSpawner.getTreeLocations();
-        int squirrelSpawnTree = Random.Range(0, 4000 * locations.Count);
+        int squirrelSpawnTree = Random.Range(0, 2000 * locations.Count);
+
+        // Check if squirrelSpawn is a valid index in locations
+        if(squirrelSpawnTree < _treesOrder.Count) {
+            List<int> planted = inv.GetPlanted();
+            int randX = Random.Range(-2, 2);
+            int randZ = Random.Range(-2, 2);
+            var squirrel = Instantiate(squirrelPrefab);
+            squirrel.transform.parent = _treeObjects[squirrelSpawnTree].transform;
+            // squirrel.transform.localPosition = map.GeoToWorldPosition(locations[squirrelSpawnTree], true);
+            squirrel.transform.localScale = new Vector3(squirrelScale, squirrelScale, squirrelScale);
+            squirrel.transform.localPosition += new Vector3(randX, 0, randZ);
+            _squirrelTrees.Add(_treesOrder[squirrelSpawnTree]);
+            DontDestroyOnLoad(squirrel);
+        }
+
         if (seconds >= 10)
         {
-            float currencyAdd = 0;
             for (int i = 0; i < _treesSpawned.Length; ++i)
             {
-                currencyAdd += _treesSpawned[i] * (i+1);
+                float currencyAdd = _treesSpawned[i] * (i+1);
                 // still need to test this
-                if(_squirrelTreesOrder.Contains(i)) {
+                if(_squirrelTrees.Contains(i)) {
                     currencyAdd *= 0.1f;
                 }
                 currency.AddCurrency(currencyAdd);
                 timer = 0.0f;
             }
-        }
-
-        // Check if squirrelSpawn is a valid index in locations
-        if(squirrelSpawnTree < locations.Count) {
-            int randX = Random.Range(-7, 7);
-            int randZ = Random.Range(-7, 7);
-            var squirrel = Instantiate(squirrelPrefab);
-            squirrel.transform.localPosition = map.GeoToWorldPosition(locations[squirrelSpawnTree], true);
-            squirrel.transform.localScale = new Vector3(squirrelScale, squirrelScale, squirrelScale);
-            squirrel.transform.localPosition += new Vector3(randX, 0, randZ);
-            DontDestroyOnLoad(squirrel);
         }
     }
 
@@ -120,16 +125,16 @@ public class TreeSpawn : MonoBehaviour
         for (int i = 0; i < planted.Count; ++i)
         {
             var instance = Instantiate(treePrefabs[planted[i]-1]);
-            Vector2d pos = playerLocation + locations[i];
+            Vector2d pos = locations[i];
             
             instance.transform.localPosition = map.GeoToWorldPosition(pos, true);
             instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
             instance.tag = "Tree";
             treeLocations.Add(pos);
             plantOrder.Add(planted[i]-1);
-            
             _treesSpawned[planted[i]-1] += 1;
-            _squirrelTreesOrder.Add(planted[i]-1);
+            _treesOrder.Add(planted[i] - 1);
+            _treeObjects.Add(instance);
         }
         inv.ClearPlanted();
     }
