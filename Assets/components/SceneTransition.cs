@@ -48,6 +48,12 @@ public class SceneTransition : MonoBehaviour
                 treeToLoad = closestObj;
                 // Only children of the tree will be squirrels
                 squirrelAttacking = treeToLoad.transform.childCount > 0;
+                // Keep squirrels of closest tree between scenes
+                if(squirrelAttacking) {
+                    foreach(Transform child in transform) {
+                        DontDestroyOnLoad(child);
+                    }
+                }
             }
             SceneManager.LoadScene("interaction_scene", LoadSceneMode.Single);
         }

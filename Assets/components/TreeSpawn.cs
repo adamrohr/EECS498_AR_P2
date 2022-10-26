@@ -32,7 +32,7 @@ public class TreeSpawn : MonoBehaviour
     private GameObject[] treePrefabs = new GameObject[10];
 
     private static int[] _treesSpawned = new int[]{0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0};
-    private List<int> _treesOrder = new List<int>();
+    private static List<int> _treesOrder = new List<int>();
     private List<int> _squirrelTrees = new List<int>();
     private List<GameObject> _treeObjects = new List<GameObject>();
 
@@ -67,7 +67,9 @@ public class TreeSpawn : MonoBehaviour
     void Update()
     {
         if(map.InitialZoom != 0 && !spawnedTrees) {
+            print("Spawning trees");
             CreateTrees();
+            print("TreesOrder Count: " + _treesOrder.Count);
             spawnedTrees = true;
         }
 
@@ -75,7 +77,7 @@ public class TreeSpawn : MonoBehaviour
         int seconds = (int)timer % 60;
         List<Vector2d> locations = objSpawner.getTreeLocations();
         int squirrelSpawnTree = Random.Range(0, 2000 * locations.Count);
-
+        
         // Check if squirrelSpawn is a valid index in locations
         if(squirrelSpawnTree < _treesOrder.Count) {
             List<int> planted = inv.GetPlanted();
@@ -87,7 +89,7 @@ public class TreeSpawn : MonoBehaviour
             squirrel.transform.localScale = new Vector3(squirrelScale, squirrelScale, squirrelScale);
             squirrel.transform.localPosition += new Vector3(randX, 0, randZ);
             _squirrelTrees.Add(_treesOrder[squirrelSpawnTree]);
-            DontDestroyOnLoad(squirrel);
+            // DontDestroyOnLoad(squirrel);
         }
 
         if (seconds >= 10)
@@ -112,13 +114,13 @@ public class TreeSpawn : MonoBehaviour
 
     public void CreateTrees()
     {
-        for (int i = 0; i < treeLocations.Count; ++i)
-        {
-            var instance = Instantiate(treePrefabs[plantOrder[i]]);
-            instance.transform.localPosition = map.GeoToWorldPosition(treeLocations[i], true);
-            instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
-            instance.tag = "Tree";
-        }
+        // for (int i = 0; i < treeLocations.Count; ++i)
+        // {
+        //     var instance = Instantiate(treePrefabs[plantOrder[i]]);
+        //     instance.transform.localPosition = map.GeoToWorldPosition(treeLocations[i], true);
+        //     instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
+        //     instance.tag = "Tree";
+        // }
         
         List<int> planted = inv.GetPlanted();
         List<Vector2d> locations = objSpawner.getTreeLocations();
@@ -135,6 +137,7 @@ public class TreeSpawn : MonoBehaviour
             _treesSpawned[planted[i]-1] += 1;
             _treesOrder.Add(planted[i] - 1);
             _treeObjects.Add(instance);
+            DontDestroyOnLoad(instance);
         }
         inv.ClearPlanted();
     }
