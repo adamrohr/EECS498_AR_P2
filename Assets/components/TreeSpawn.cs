@@ -10,7 +10,7 @@ using Mapbox.Unity.Location;
 
 public class TreeSpawn : MonoBehaviour
 {
-    
+    [SerializeField] private EditorLocationProviderLocationLog locationLog;
     [SerializeField]
     private AbstractMap map;
     [SerializeField] private ItemTracker inv;
@@ -45,6 +45,7 @@ public class TreeSpawn : MonoBehaviour
 
     private static List<Vector2d> treeLocations = new List<Vector2d>();
     private static List<int> plantOrder = new List<int>();
+    private static List<int> _treeGrowth = new List<int>();
     
     // Start is called before the first frame update
     void Start()
@@ -92,15 +93,28 @@ public class TreeSpawn : MonoBehaviour
 
         if (seconds >= 10)
         {
-            for (int i = 0; i < _treesSpawned.Length; ++i)
+            for (int i = 0; i < _treeObjects.Count; ++i)
             {
-                float currencyAdd = _treesSpawned[i] * (i+1);
-                // still need to test this
-                if(_squirrelTrees.Contains(i)) {
-                    currencyAdd *= 0.1f;
+                if (_treeGrowth[i] == 5)
+                {
+                    float currencyAdd = _treesSpawned[i] * (i+1);
+                    // still need to test this
+                    if(_squirrelTrees.Contains(i)) {
+                        currencyAdd *= 0.1f;
+                    }
+                    currency.AddCurrency(currencyAdd);
+                    timer = 0.0f;
                 }
-                currency.AddCurrency(currencyAdd);
-                timer = 0.0f;
+            }
+        }
+
+        for (int i = 0; i < _treeObjects.Count; ++i)
+        {
+            if (_treeGrowth[i] < 5 && locationLog.GetMovement() >= 0.005)
+            {
+                _treeGrowth[i] += 1;
+                _treeObjects[i].transform.localScale = new Vector3(_treeGrowth[i], _treeGrowth[i], _treeGrowth[i]);
+                locationLog.ClearMovement();
             }
         }
     }
@@ -128,13 +142,14 @@ public class TreeSpawn : MonoBehaviour
             Vector2d pos = locations[i];
             
             instance.transform.localPosition = map.GeoToWorldPosition(pos, true);
-            instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
+            instance.transform.localScale = new Vector3(1, 1, 1);
             instance.tag = "Tree";
             treeLocations.Add(pos);
             plantOrder.Add(planted[i]-1);
             _treesSpawned[planted[i]-1] += 1;
             _treesOrder.Add(planted[i] - 1);
             _treeObjects.Add(instance);
+            _treeGrowth.Add(1);
         }
         inv.ClearPlanted();
     }

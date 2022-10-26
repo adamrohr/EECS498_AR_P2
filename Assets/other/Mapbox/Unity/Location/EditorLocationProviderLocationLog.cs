@@ -80,6 +80,16 @@
 			playerMovement += Mathf.Abs(deltaLatitude) + Mathf.Abs(deltaLongitude);
 		}
 
+		public float GetMovement()
+		{
+			return playerMovement;
+		}
+
+		public void ClearMovement()
+		{
+			playerMovement = 0f;
+		}
+
 		// private void OnDestroy()
 		// {
 		// 	if (null != _locationEnumerator)
@@ -104,11 +114,6 @@
 			_currentLocation.LatitudeLongitude += new Vector2d(deltaLatitude, deltaLongitude);
 			playerLocation = _currentLocation.LatitudeLongitude;
 			treeSpawn.SetPlayerLocation(playerLocation);
-		}
-
-		public Vector2d GetPlayerLocation()
-		{
-			return playerLocation;
 		}
 	}
 }

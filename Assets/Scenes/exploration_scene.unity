@@ -1331,6 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b16f8deebb114cd7bdc2390f8d639a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locationLog: {fileID: 1839344568}
   map: {fileID: 133671051}
   inv: {fileID: 1347463308}
   currency: {fileID: 186529199}
@@ -3688,6 +3689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1883403352}
+  _squirrelAttackMusic: {fileID: 0}
 --- !u!1 &646379807
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,6 +6935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  _squirrelAttackMusic: {fileID: 0}
 --- !u!114 &1038541087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9631,9 +9634,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418293570}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 0.000039798786, z: -0.00006511882}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 867321684}
@@ -12200,6 +12203,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796655427}
   m_CullTransparentMesh: 1
+--- !u!114 &1839344568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114275890671072080, guid: 35ce2bb4caba9434db5e656796b632b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 843921207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34c76d6349bc9844998f48d16f0d3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1853860637
 GameObject:
   m_ObjectHideFlags: 0
