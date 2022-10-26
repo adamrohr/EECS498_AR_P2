@@ -11,8 +11,7 @@ public class OrbitCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Vector3 desiredPosition = target.position + offset;
-        // transform.position = desiredPosition;
+        
         if(Input.GetMouseButton(0)) {
             float translation = 0.0f;
             if(Input.GetAxis("Mouse X") < 0) {
@@ -29,6 +28,11 @@ public class OrbitCamera : MonoBehaviour
             // float yTranslation = Input.GetAxis("Mouse Y") * speed * Time.deltaTime;
             transform.Translate(translation, 0, 0);
             
+        }
+        else
+        {
+            Vector3 desiredPosition = target.position + offset;
+            transform.position = desiredPosition;
         }
         transform.LookAt(target);
     }
