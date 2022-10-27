@@ -10,7 +10,9 @@ public class MarkerInteraction : MonoBehaviour
     private string _name = new string("");
     private GameObject _info;
     private int _itemUnlock;
+    private float dist;
     [SerializeField] private ItemTracker inv;
+    [SerializeField] private GameObject player;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class MarkerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        dist = Mathf.Abs(Vector3.Distance(transform.position, player.transform.position));
     }
 
     public void SetMarkerName(string newName)
@@ -41,7 +43,9 @@ public class MarkerInteraction : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _info.SetActive(true);
-        inv.UnlockSeed(_itemUnlock);
+        if(dist < 10) {
+            _info.SetActive(true);
+            inv.UnlockSeed(_itemUnlock);
+        }
     }
 }

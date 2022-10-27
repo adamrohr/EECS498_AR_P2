@@ -80,13 +80,12 @@ public class TreeSpawn : MonoBehaviour
         int squirrelSpawnTree = Random.Range(0, 2000 * locations.Count);
         
         // Check if squirrelSpawn is a valid index in locations
-        if(squirrelSpawnTree < _treesOrder.Count) {
+        if(squirrelSpawnTree < _treesOrder.Count && _treeGrowth[squirrelSpawnTree] == 5) {
             List<int> planted = inv.GetPlanted();
             int randX = Random.Range(-2, 2);
             int randZ = Random.Range(-2, 2);
             var squirrel = Instantiate(squirrelPrefab);
             squirrel.transform.parent = _treeObjects[squirrelSpawnTree].transform;
-            // squirrel.transform.localPosition = map.GeoToWorldPosition(locations[squirrelSpawnTree], true);
             squirrel.transform.localScale = new Vector3(squirrelScale, squirrelScale, squirrelScale);
             squirrel.transform.localPosition += new Vector3(randX, 0, randZ);
             _squirrelTrees.Add(_treesOrder[squirrelSpawnTree]);
@@ -100,7 +99,6 @@ public class TreeSpawn : MonoBehaviour
                 if (_treeGrowth[i] == 5)
                 {
                     float currencyAdd = _treesSpawned[i] * (i+1);
-                    // still need to test this
                     if(_squirrelTrees.Contains(i)) {
                         currencyAdd *= 0.1f;
                     }
