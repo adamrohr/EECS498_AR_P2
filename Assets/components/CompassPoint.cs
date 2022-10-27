@@ -11,9 +11,5 @@ public class CompassPoint : MonoBehaviour
         Vector3 vec = new Vector3();
         vec.z = camera.transform.eulerAngles.y;
         transform.localEulerAngles = vec;
-        // transform.position = new Vector3(-1, 0, 0);
-        // transform.forward = new Vector3(camera.transform.rotation.x, camera.transform.rotation.y, camera.transform.rotation.z);
-        // transform.rotation = Quaternion.identity;
-        // transform.RotateAround(transform.position, Vector3.forward, 5);
     }
 }
