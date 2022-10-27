@@ -141,12 +141,12 @@ public class TreeSpawn : MonoBehaviour
         for (int i = 0; i < planted.Count; ++i)
         {
             var instance = Instantiate(treePrefabs[planted[i]-1]);
-            Vector2d pos = locations[i];
-            
-            instance.transform.localPosition = map.GeoToWorldPosition(pos, true);
+            //Vector2d pos = locations[i];
+            Vector2d treeOffset = new Vector2d(Random.Range(-0.0001f, 0.0001f), Random.Range(-0.0001f, 0.0001f));
+            instance.transform.localPosition = map.GeoToWorldPosition(playerLocation + treeOffset, true);
             instance.transform.localScale = new Vector3(1, 1, 1);
             instance.tag = "Tree";
-            treeLocations.Add(pos);
+            treeLocations.Add(playerLocation + treeOffset);
             plantOrder.Add(planted[i]-1);
             _treesSpawned[planted[i]-1] += 1;
             _treesOrder.Add(planted[i] - 1);
