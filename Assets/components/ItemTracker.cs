@@ -22,6 +22,20 @@ public class ItemTracker : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mySeeds7;
     [SerializeField] private TextMeshProUGUI mySeeds8;
     [SerializeField] private TextMeshProUGUI mySeeds9;
+
+    [SerializeField] private TextMeshProUGUI shopAcorns;
+    [SerializeField] private TextMeshProUGUI shopSeed0;
+    [SerializeField] private TextMeshProUGUI shopSeed1;
+    [SerializeField] private TextMeshProUGUI shopSeed2;
+    [SerializeField] private TextMeshProUGUI shopSeed3;
+    [SerializeField] private TextMeshProUGUI shopSeed4;
+    [SerializeField] private TextMeshProUGUI shopSeed5;
+    [SerializeField] private TextMeshProUGUI shopSeed6;
+    [SerializeField] private TextMeshProUGUI shopSeed7;
+    [SerializeField] private TextMeshProUGUI shopSeed8;
+    [SerializeField] private TextMeshProUGUI shopSeed9;
+
+    private List<TextMeshProUGUI> _shopTexts = new List<TextMeshProUGUI>();
     
     private TextMeshProUGUI[] _itemTexts = new TextMeshProUGUI[11];
     private void Start()
@@ -38,6 +52,30 @@ public class ItemTracker : MonoBehaviour
         _itemTexts[9] = mySeeds8;
         _itemTexts[10] = mySeeds9;
         UpdateSeedsCount();
+
+        _shopTexts.Add(shopAcorns);
+        _shopTexts.Add(shopSeed0);
+        _shopTexts.Add(shopSeed1);
+        _shopTexts.Add(shopSeed2);
+        _shopTexts.Add(shopSeed3);
+        _shopTexts.Add(shopSeed4);
+        _shopTexts.Add(shopSeed5);
+        _shopTexts.Add(shopSeed6);
+        _shopTexts.Add(shopSeed7);
+        _shopTexts.Add(shopSeed8);
+        _shopTexts.Add(shopSeed9);
+
+        for (int i = 0; i < _shopTexts.Count; ++i)
+        {
+            if (_itemsEnabled[i])
+            {
+                _shopTexts[i].color = Color.black;
+            }
+            else
+            {
+                _shopTexts[i].color = Color.gray;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -90,6 +128,7 @@ public class ItemTracker : MonoBehaviour
         if (!_itemsEnabled[item])
         {
             _itemsEnabled[item] = true;
+            _shopTexts[item].color = Color.black;
         }
     }
 }

@@ -9475,6 +9475,17 @@ MonoBehaviour:
   mySeeds7: {fileID: 308165019}
   mySeeds8: {fileID: 1271954543}
   mySeeds9: {fileID: 1796655429}
+  shopAcorns: {fileID: 2040674951}
+  shopSeed0: {fileID: 25570183}
+  shopSeed1: {fileID: 447109147}
+  shopSeed2: {fileID: 2007112781}
+  shopSeed3: {fileID: 212897065}
+  shopSeed4: {fileID: 1002473702}
+  shopSeed5: {fileID: 291859085}
+  shopSeed6: {fileID: 1204826423}
+  shopSeed7: {fileID: 985196953}
+  shopSeed8: {fileID: 1608968750}
+  shopSeed9: {fileID: 1075027716}
 --- !u!1 &1390920550
 GameObject:
   m_ObjectHideFlags: 0
