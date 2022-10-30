@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class ARObjectSpawner : MonoBehaviour
 {
     public Transform cursor;
+    [SerializeField] private GameObject dataPersistance;
     [SerializeField] private GameObject gameobject_to_spawn_0;
     [SerializeField] private GameObject gameobject_to_spawn_1;
     [SerializeField] private GameObject gameobject_to_spawn_2;
@@ -19,6 +20,7 @@ public class ARObjectSpawner : MonoBehaviour
     [SerializeField] private GameObject gameobject_to_spawn_8;
     [SerializeField] private GameObject gameobject_to_spawn_9;
 
+    private TreeSpawn _treeSpawnScript;
     private GameObject[] trees = new GameObject[10];
     private static List<Vector2d> treeLocations = new List<Vector2d>();
 
@@ -37,17 +39,16 @@ public class ARObjectSpawner : MonoBehaviour
         trees[7] = gameobject_to_spawn_7;
         trees[8] = gameobject_to_spawn_8;
         trees[9] = gameobject_to_spawn_9;
-
+        _treeSpawnScript = dataPersistance.GetComponent<TreeSpawn>();
     }
 
     public void SpawnGameobjectAtCursor(int objectNumber)
     {
+        var playerLocation = _treeSpawnScript.GetPlayerLocation();
         GameObject new_object = Instantiate(trees[objectNumber]);
         new_object.transform.SetPositionAndRotation(cursor.position, cursor.rotation);
         new_object.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
-        // Vector2d treeLoc = new Vector2d(cursor.position.x*0.000001, cursor.position.y*0.000001);
-        Vector2d treeLoc = new Vector2d(42.291609, -83.715868);
-        treeLocations.Add(treeLoc);
+        treeLocations.Add(playerLocation);
         for(int i = 0; i < treeLocations.Count; i++) {
             print("SpawnObj at cursor loop");
             print(treeLocations[i]);

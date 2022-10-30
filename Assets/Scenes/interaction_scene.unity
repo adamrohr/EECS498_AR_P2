@@ -2220,6 +2220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 223974227}
+  dataPersistance: {fileID: 1582111793843613554, guid: 483b5cfca7c344223b3e584ca4e8b288,
+    type: 3}
   gameobject_to_spawn_0: {fileID: 1779090162253299471, guid: af28e02efb1b49bc09580ce7162442e3,
     type: 3}
   gameobject_to_spawn_1: {fileID: 2441779057326299809, guid: 4e9f5b3ff3b6fa4aaa4678ac8bf8e429,

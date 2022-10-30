@@ -16,6 +16,7 @@ public class TreeSpawn : MonoBehaviour
     [SerializeField] private ItemTracker inv;
     [SerializeField] private Currency currency;
     [SerializeField] private ARObjectSpawner objSpawner;
+    [SerializeField] private GameObject dataPersistance;
 
     [SerializeField] private GameObject tree0;
     [SerializeField] private GameObject tree1;
@@ -37,7 +38,7 @@ public class TreeSpawn : MonoBehaviour
     private List<GameObject> _treeObjects = new List<GameObject>();
 
     [SerializeField] float spawnScale = .2f;
-    [SerializeField] float squirrelScale = .3f;
+    [SerializeField] float squirrelScale = .05f;
 
     private static Vector2d playerLocation;
     private float timer = 0.0f;
@@ -60,7 +61,7 @@ public class TreeSpawn : MonoBehaviour
         treePrefabs[7] = tree7;
         treePrefabs[8] = tree8;
         treePrefabs[9] = tree9;
-        
+        DontDestroyOnLoad(dataPersistance);        
         // CreateTrees();
     }
 
@@ -82,8 +83,8 @@ public class TreeSpawn : MonoBehaviour
         // Check if squirrelSpawn is a valid index in locations
         if(squirrelSpawnTree < _treesOrder.Count && _treeGrowth[squirrelSpawnTree] == 5) {
             List<int> planted = inv.GetPlanted();
-            int randX = Random.Range(-2, 2);
-            int randZ = Random.Range(-2, 2);
+            float randX = Random.Range(-1, 1);
+            float randZ = Random.Range(-1, 1);
             var squirrel = Instantiate(squirrelPrefab);
             squirrel.transform.parent = _treeObjects[squirrelSpawnTree].transform;
             squirrel.transform.localScale = new Vector3(squirrelScale, squirrelScale, squirrelScale);
@@ -110,7 +111,7 @@ public class TreeSpawn : MonoBehaviour
 
         for (int i = 0; i < _treeObjects.Count; ++i)
         {
-            if (_treeGrowth[i] < 5 && locationLog.GetMovement() >= 0.005)
+            if (_treeGrowth[i] < 5 && locationLog.GetMovement() >= 0.001)
             {
                 _treeGrowth[i] += 1;
                 _treeObjects[i].transform.localScale = new Vector3(_treeGrowth[i], _treeGrowth[i], _treeGrowth[i]);
@@ -158,5 +159,10 @@ public class TreeSpawn : MonoBehaviour
     public void SetPlayerLocation(Vector2d location)
     {
         playerLocation = location;
+    }
+
+    public Vector2d GetPlayerLocation()
+    {
+        return playerLocation;    
     }
 }

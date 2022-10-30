@@ -1335,6 +1335,8 @@ MonoBehaviour:
   inv: {fileID: 1347463308}
   currency: {fileID: 186529199}
   objSpawner: {fileID: 1680056664}
+  dataPersistance: {fileID: 1582111793843613554, guid: 483b5cfca7c344223b3e584ca4e8b288,
+    type: 3}
   tree0: {fileID: 1779090162253299471, guid: af28e02efb1b49bc09580ce7162442e3, type: 3}
   tree1: {fileID: 2441779057326299809, guid: 4e9f5b3ff3b6fa4aaa4678ac8bf8e429, type: 3}
   tree2: {fileID: 192044, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
@@ -1345,10 +1347,10 @@ MonoBehaviour:
   tree7: {fileID: 137650, guid: 826b6a0b570e8460990010fa615b5a2a, type: 3}
   tree8: {fileID: 4521090229625430784, guid: 874e3a4a755ef9e639594d1f5df968d1, type: 3}
   tree9: {fileID: 4124323062290505003, guid: e021f2107856b97978976612624c27b8, type: 3}
-  squirrelPrefab: {fileID: 919132149155446097, guid: cd8a7f25d3e1d4bd5ba15864c3210254,
+  squirrelPrefab: {fileID: 6576498222540548200, guid: 8bd19e29581ea41e3921e9662077b2da,
     type: 3}
   spawnScale: 5
-  squirrelScale: 0.3
+  squirrelScale: 0.05
 --- !u!1 &137357532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2373,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9b15ad2105942299ac76eb8060adcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &355963646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355963640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1dc1fd9e67248d1b7ad7529a7fe355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldenAcornPrefab: {fileID: 1701650514163371531, guid: 1594ddf57d9004459bc42474c62e40a7,
+    type: 3}
+  redAcornPrefab: {fileID: 3516683313514199885, guid: 44f20b77669d541ecbf57ce6dde33fec,
+    type: 3}
+  acornScale: 100
+--- !u!65 &355963647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355963640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33916825, y: 1.6606466, z: 0.18215182}
+  m_Center: {x: -0.0007084608, y: 0.8334395, z: -0.02645506}
+--- !u!54 &355963648
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355963640}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &382859397
 GameObject:
   m_ObjectHideFlags: 0
@@ -11809,6 +11857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 0}
+  dataPersistance: {fileID: 0}
   gameobject_to_spawn_0: {fileID: 0}
   gameobject_to_spawn_1: {fileID: 0}
   gameobject_to_spawn_2: {fileID: 0}
@@ -13658,6 +13707,11 @@ PrefabInstance:
       propertyPath: inv
       value: 
       objectReference: {fileID: 1347463308}
+    - target: {fileID: 1449051924554379341, guid: 3b05d594cce2543979513e78d903857f,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1883403352}
     - target: {fileID: 3929413350646648991, guid: 3b05d594cce2543979513e78d903857f,
         type: 3}
       propertyPath: m_RootOrder
