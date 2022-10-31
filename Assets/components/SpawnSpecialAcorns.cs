@@ -57,17 +57,18 @@ public class SpawnSpecialAcorns : MonoBehaviour
     {
         if (c.gameObject.tag == "GoldAcorn") {
             inv.AddFreeItem(11);
+            Destroy(c.gameObject);
             print("Touched Gold");
         } else if(c.gameObject.tag == "RedAcorn") {
             curr.AddCurrency(10);
+            Destroy(c.gameObject);
             print("Touched Red");
         }
         else if (c.GameObject().tag == "Acorn")
         {
             inv.AddFreeItem(0);
+            Destroy(c.gameObject);
             print("Touched Acorn");
         }
-
-        Destroy(c.gameObject);
     }
 }
