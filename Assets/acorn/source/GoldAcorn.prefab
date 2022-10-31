@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3725143420350918422}
   - component: {fileID: 4563924473744941335}
   - component: {fileID: 7936966752390027576}
-  - component: {fileID: 6994790367840918850}
   - component: {fileID: 650408518113743993}
+  - component: {fileID: 7197092589230400545}
+  - component: {fileID: 6682555712107891665}
   m_Layer: 0
   m_Name: GoldAcorn
   m_TagString: GoldAcorn
@@ -85,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6994790367840918850
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701650514163371531}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.022252012, y: 0.02817465, z: 0.022252016}
-  m_Center: {x: 0.0000000013969839, y: 0.0006000269, z: -4.656613e-10}
 --- !u!54 &650408518113743993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -109,8 +97,33 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &7197092589230400545
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701650514163371531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.014087325
+  m_Center: {x: 0.0000000013969839, y: 0.0006000269, z: -4.656613e-10}
+--- !u!114 &6682555712107891665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701650514163371531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c7d8f0e5bf2487188683683d3218ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

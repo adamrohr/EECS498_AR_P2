@@ -58,22 +58,22 @@
 			deltaLatitude = 0f;
 			if(Input.GetKey(KeyCode.RightArrow)) {
 				// Longitude up
-				deltaLongitude = 0.000001f;
+				deltaLongitude = 0.000005f;
 				SetLocation();
 			}
 			if(Input.GetKey(KeyCode.LeftArrow)) {
 				// Longitude down
-				deltaLongitude = -0.000001f;
+				deltaLongitude = -0.000005f;
 				SetLocation();
 			}
 			if(Input.GetKey(KeyCode.UpArrow)) {
 				// Latitude up
-				deltaLatitude = 0.000001f;
+				deltaLatitude = 0.000005f;
 				SetLocation();
 			}
 			if(Input.GetKey(KeyCode.DownArrow)) {
 				// Longitude down
-				deltaLatitude = -0.000001f;
+				deltaLatitude = -0.000005f;
 				SetLocation();
 			}
 			// TODO: Determine what cutoff the trees should start growing at based on the movement
@@ -113,7 +113,7 @@
 			// _locationEnumerator.MoveNext();
 			_currentLocation.LatitudeLongitude += new Vector2d(deltaLatitude, deltaLongitude);
 			playerLocation = _currentLocation.LatitudeLongitude;
-			treeSpawn.SetPlayerLocation(playerLocation);
 		}
-	}
+
+ 	}
 }

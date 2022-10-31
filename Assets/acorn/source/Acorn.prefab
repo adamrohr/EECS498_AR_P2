@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 6347216728989644952}
   - component: {fileID: 8050760929758361405}
   - component: {fileID: 5214881536750896119}
-  - component: {fileID: -6012938708292435957}
+  - component: {fileID: 6501983988848372146}
+  - component: {fileID: 7499690021520108808}
+  - component: {fileID: 7157788992367933676}
   m_Layer: 0
   m_Name: Acorn
   m_TagString: Acorn
@@ -84,7 +86,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &-6012938708292435957
+--- !u!135 &6501983988848372146
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007246997187748386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.014087325
+  m_Center: {x: 0.0000000013969839, y: 0.0006000269, z: -4.656613e-10}
+--- !u!54 &7499690021520108808
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,3 +115,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7157788992367933676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007246997187748386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c7d8f0e5bf2487188683683d3218ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

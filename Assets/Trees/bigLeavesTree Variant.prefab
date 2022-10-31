@@ -100,20 +100,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1473223271229080158}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &-8034920370868529088
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779090162253299471}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4790000225344279549, guid: 331e6cacaa5064ecb91f918c9aca93fd, type: 3}
 --- !u!114 &-5277253186110369220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebd6e9a9ffb34369bfe8f79b75e4d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyEarned: 0
+  playerMovementGrowthTransition: []

@@ -5,7 +5,7 @@ using TMPro;
 public class ItemTracker : MonoBehaviour
 {
     // Start is called before the first frame update
-    private static int[] _items = new int[11]{10, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private static int[] _items = new int[12]{5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     private int[] _itemPrices = new int[11] {5, 5, 7, 10, 12, 15, 17, 20, 25, 30 ,50};
     private static bool[] _itemsEnabled = new bool[11] { true, false, false, false, false, false, false, false, false, false, false};
     private static List<int> _seedsPlanted = new List<int>();
@@ -22,6 +22,7 @@ public class ItemTracker : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mySeeds7;
     [SerializeField] private TextMeshProUGUI mySeeds8;
     [SerializeField] private TextMeshProUGUI mySeeds9;
+    [SerializeField] private TextMeshProUGUI goldAcorns;
 
     [SerializeField] private TextMeshProUGUI shopAcorns;
     [SerializeField] private TextMeshProUGUI shopSeed0;
@@ -37,7 +38,7 @@ public class ItemTracker : MonoBehaviour
 
     private List<TextMeshProUGUI> _shopTexts = new List<TextMeshProUGUI>();
     
-    private TextMeshProUGUI[] _itemTexts = new TextMeshProUGUI[11];
+    private TextMeshProUGUI[] _itemTexts = new TextMeshProUGUI[12];
     private void Start()
     {
         _itemTexts[0] = acorns;
@@ -51,6 +52,7 @@ public class ItemTracker : MonoBehaviour
         _itemTexts[8] = mySeeds7;
         _itemTexts[9] = mySeeds8;
         _itemTexts[10] = mySeeds9;
+        _itemTexts[11] = goldAcorns;
         UpdateSeedsCount();
 
         _shopTexts.Add(shopAcorns);
@@ -97,11 +99,20 @@ public class ItemTracker : MonoBehaviour
 
     public void AddItem(int from)
     {
-        if (_itemsEnabled[from] && currency.GetCurrency() >= _itemPrices[from] && _items[from] < 10)
+        if (_itemsEnabled[from] && currency.GetCurrency() >= _itemPrices[from] && _items[from] < 98)
         {
             _items[from] += 1;
             _itemTexts[from].text = _items[from].ToString();
             currency.SubtractCurrency(_itemPrices[from]);
+        }
+    }
+
+    public void AddFreeItem(int from)
+    {
+        if (_items[from] < 98)
+        {
+            _items[from] += 1;
+            _itemTexts[from].text = _items[from].ToString();
         }
     }
 

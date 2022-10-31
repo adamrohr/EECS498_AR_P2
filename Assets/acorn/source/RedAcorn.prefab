@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3133649637508573412}
   - component: {fileID: 5192506922011976471}
   - component: {fileID: 1754764641112070915}
-  - component: {fileID: -2189247515312375326}
   - component: {fileID: -3110193120203806230}
+  - component: {fileID: 4030450406583339831}
+  - component: {fileID: 618448809235959584}
   m_Layer: 0
   m_Name: RedAcorn
   m_TagString: RedAcorn
@@ -85,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &-2189247515312375326
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3516683313514199885}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.022252012, y: 0.02817465, z: 0.022252016}
-  m_Center: {x: 0.0000000013969839, y: 0.0006000269, z: -4.656613e-10}
 --- !u!54 &-3110193120203806230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -114,3 +102,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &4030450406583339831
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3516683313514199885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.014087325
+  m_Center: {x: 0.0000000013969839, y: 0.0006000269, z: -4.656613e-10}
+--- !u!114 &618448809235959584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3516683313514199885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c7d8f0e5bf2487188683683d3218ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

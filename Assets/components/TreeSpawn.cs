@@ -11,12 +11,14 @@ using Mapbox.Unity.Location;
 public class TreeSpawn : MonoBehaviour
 {
     [SerializeField] private EditorLocationProviderLocationLog locationLog;
+    [SerializeField] private DeviceLocationProvider deviceLocProvider;
     [SerializeField]
     private AbstractMap map;
     [SerializeField] private ItemTracker inv;
     [SerializeField] private Currency currency;
     [SerializeField] private ARObjectSpawner objSpawner;
     [SerializeField] private GameObject dataPersistance;
+    [SerializeField] private SceneTransition transition;
 
     [SerializeField] private GameObject tree0;
     [SerializeField] private GameObject tree1;
@@ -34,10 +36,9 @@ public class TreeSpawn : MonoBehaviour
 
     private static int[] _treesSpawned = new int[]{0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0};
     private static List<int> _treesOrder = new List<int>();
-    private List<int> _squirrelTrees = new List<int>();
-    private List<GameObject> _treeObjects = new List<GameObject>();
+    private static List<int> _squirrelTrees = new List<int>();
+    private static List<GameObject> _treeObjects = new List<GameObject>();
 
-    [SerializeField] float spawnScale = .2f;
     [SerializeField] float squirrelScale = .05f;
 
     private static Vector2d playerLocation;
@@ -65,9 +66,20 @@ public class TreeSpawn : MonoBehaviour
         // CreateTrees();
     }
 
+    private void Map_OnInitialized()
+    {
+        if (spawnedTrees) return;
+        CreateTrees();
+        spawnedTrees = true;
+    }
     // Update is called once per frame
     void Update()
     {
+        UpdatePlayerLocation();
+        timer += Time.deltaTime;
+        int seconds = (int)timer % 60;
+        
+        //map.OnInitialized += Map_OnInitialized;
         if(map.InitialZoom != 0 && !spawnedTrees) {
             print("Spawning trees");
             CreateTrees();
@@ -75,8 +87,7 @@ public class TreeSpawn : MonoBehaviour
             spawnedTrees = true;
         }
 
-        timer += Time.deltaTime;
-        int seconds = (int)timer % 60;
+        
         List<Vector2d> locations = objSpawner.getTreeLocations();
         int squirrelSpawnTree = Random.Range(0, 2000 * locations.Count);
         
@@ -127,13 +138,11 @@ public class TreeSpawn : MonoBehaviour
 
     public void CreateTrees()
     {
-        // for (int i = 0; i < treeLocations.Count; ++i)
-        // {
-        //     var instance = Instantiate(treePrefabs[plantOrder[i]]);
-        //     instance.transform.localPosition = map.GeoToWorldPosition(treeLocations[i], true);
-        //     instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
-        //     instance.tag = "Tree";
-        // }
+        for (int i = 0; i < treeLocations.Count; ++i)
+        {
+            _treeObjects[i].transform.localPosition = map.GeoToWorldPosition(treeLocations[i]);
+            _treeObjects[i].transform.localScale = new Vector3(_treeGrowth[i], _treeGrowth[i], _treeGrowth[i]);
+        }
         
         List<int> planted = inv.GetPlanted();
         List<Vector2d> locations = objSpawner.getTreeLocations();
@@ -143,7 +152,9 @@ public class TreeSpawn : MonoBehaviour
             //Vector2d pos = locations[i];
             Vector2d treeOffset = new Vector2d(Random.Range(-0.0001f, 0.0001f), Random.Range(-0.0001f, 0.0001f));
             instance.transform.localPosition = map.GeoToWorldPosition(playerLocation + treeOffset, true);
-            instance.transform.localScale = new Vector3(1, 1, 1);
+            int _initTreeGrowth = 1;
+            
+            instance.transform.localScale = new Vector3(_initTreeGrowth, _initTreeGrowth, _initTreeGrowth);
             instance.tag = "Tree";
             treeLocations.Add(playerLocation + treeOffset);
             plantOrder.Add(planted[i]-1);
@@ -151,18 +162,23 @@ public class TreeSpawn : MonoBehaviour
             _treesOrder.Add(planted[i] - 1);
             _treeObjects.Add(instance);
             DontDestroyOnLoad(instance);
-            _treeGrowth.Add(1);
+            _treeGrowth.Add(_initTreeGrowth);
+            transition.UpdateTrees(_treeObjects, _treeGrowth);
         }
         inv.ClearPlanted();
     }
 
-    public void SetPlayerLocation(Vector2d location)
+    public void UpdatePlayerLocation()
     {
-        playerLocation = location;
+    #if UNITY_EDITOR
+        playerLocation = locationLog.CurrentLocation.LatitudeLongitude;
+    #else
+        playerLocation = deviceLocProvider.CurrentLocation.LatitudeLongitude;
+    #endif
     }
 
     public Vector2d GetPlayerLocation()
     {
-        return playerLocation;    
+        return playerLocation;
     }
 }

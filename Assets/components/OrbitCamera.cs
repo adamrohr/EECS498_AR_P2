@@ -8,32 +8,28 @@ public class OrbitCamera : MonoBehaviour
     public Vector3 offset;
     public float speed = 5.0f;
 
-    // Update is called once per frame
-    void Update()
+    [Range(0.0f, 1.0f)] public float smoothFactor = 0.5f;
+
+    public float xRotateSpeed = 8.0f;
+    public float yRotateSpeed = 10.0f;
+
+    private void Start()
     {
-        
-        if(Input.GetMouseButton(0)) {
-            float translation = 0.0f;
-            if(Input.GetAxis("Mouse X") < 0) {
-                translation = -1;
-            } else if(Input.GetAxis("Mouse X") > 0) {
-                translation = 1;
-            }
-            // float zTranslation = Mathf.Sin(10 * Input.GetAxis("Mouse X"));
-            // float xTranslation = Mathf.Cos(10 * Input.GetAxis("Mouse X"));
-            float yTranslation = Input.GetAxis("Mouse Y") * speed;
-            if(transform.position.y > 0 || yTranslation > 0) {
-                transform.Translate(0, yTranslation, 0);
-            }
-            // float yTranslation = Input.GetAxis("Mouse Y") * speed * Time.deltaTime;
-            transform.Translate(translation, 0, 0);
-            
-        }
-        else
+        offset = transform.position - target.position;
+    }
+
+    private void LateUpdate()
+    {
+        if (Input.GetMouseButton(0))
         {
-            Vector3 desiredPosition = target.position + offset;
-            transform.position = desiredPosition;
+            Quaternion xCamTurn = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * xRotateSpeed, Vector3.up);
+            Quaternion yCamTurn = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * yRotateSpeed, transform.right);
+            offset = xCamTurn * yCamTurn * offset;
         }
+        Vector3 newPos = target.position + offset;
+        transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor);
+
+        
         transform.LookAt(target);
     }
 }
